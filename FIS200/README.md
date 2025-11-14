@@ -7,7 +7,7 @@ Cada experiencia incluye los scripts relevantes y una breve descripción del obj
 
 ## 🔹 Experiencias
 
-### **1) Experiencia 1 — Determinación de la constante elástica, análisis de distancias y comparación teórico–experimental**
+### **Experiencia 1 — Determinación de la constante elástica, análisis de distancias y comparación teórico–experimental**
 
 En esta experiencia se trabajó con un sistema de lanzamiento usando un resorte comprimido.  
 Los objetivos principales fueron:
@@ -37,4 +37,21 @@ Los objetivos principales fueron:
 
 ---
 
+---
+
+## **Experiencia 2 — Dinámica del movimiento con y sin roce**
+
+En esta experiencia se analizó la evolución temporal de la velocidad de un bloque deslizándose por un riel inclinado bajo tres condiciones distintas: sin roce, con roce débil y con roce más intenso.  
+
+Se implementó un único script que calcula las expresiones de velocidad para cada modelo y genera un gráfico comparativo exportado como `grafico_velocidades_promedio.png`.
+
+**Script incluido:**
+
+- **[`analisis_velocidad_con_y_sin_roce.py`](./Experiencias/Experiencia_2/Scripts/analisis_velocidad_con_y_sin_roce.py)**  
+  Contiene el cálculo de:  
+  - Velocidad sin roce usando \( v(t) = v_0 + at \)  
+  - Velocidad con roce lineal usando \( v(t) = v_f + (v_0 - v_f)e^{-\gamma t} \)  
+  Además genera un gráfico comparativo entre los tres casos.
+
+---
 
