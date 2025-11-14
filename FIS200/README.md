@@ -67,8 +67,8 @@ Además genera un gráfico comparativo entre los tres casos.
 
 ## **Experiencia 3 — Análisis del coeficiente de difusión**
 
-En esta experiencia se estudió el movimiento aleatorio de una partícula utilizando datos experimentales de posición \(x(t)\) y \(y(t)\).  
-A partir de estos datos se calculó el desplazamiento radial \( r(t) \), el desplazamiento cuadrático medio \( \langle r^2(t) \rangle \) y se obtuvo el coeficiente de difusión mediante un ajuste lineal.
+En esta experiencia se estudió el movimiento aleatorio de una partícula utilizando datos experimentales de posición $x(t)$ y $y(t)$.  
+A partir de estos datos se calculó el desplazamiento radial $r(t)$, el desplazamiento cuadrático medio $\langle r^2(t)\rangle$ y se obtuvo el coeficiente de difusión mediante un ajuste lineal.
 
 La relación fundamental utilizada fue:
 
@@ -79,21 +79,21 @@ $$
 y el desplazamiento cuadrático medio:
 
 $$
-\langle r^2(t) \rangle = \frac{1}{N} \sum_{i=1}^{N} r_i^2(t)
+\langle r^2(t)\rangle = \frac{1}{N} \sum_{i=1}^{N} r_i^2(t)
 $$
 
 El coeficiente de difusión se obtuvo usando:
 
 $$
-D = \frac{1}{4}\,\frac{d}{dt}\langle r^2(t) \rangle
+D = \frac{1}{4}\,\frac{d}{dt}\langle r^2(t)\rangle
 $$
 
 **Script incluido:**
 
 - **[`analisis_coeficiente_difusion.py`](./Experiencias/Experiencia_3/Scripts/analisis_coeficiente_difusion.py)**  
-  Procesa los datos, calcula \( r(t) \), \( r^2(t) \), su promedio, el error estándar, realiza un ajuste lineal y determina el coeficiente de difusión junto con su incertidumbre.  
+  Procesa los datos, calcula $r(t)$, $r^2(t)$, su promedio, el error estándar, realiza un ajuste lineal y determina el coeficiente de difusión junto con su incertidumbre.  
   Además genera y exporta un gráfico comparando los datos y el ajuste.
 
-
 ---
+
 
