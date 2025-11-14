@@ -158,19 +158,18 @@ El segundo script:
 En esta experiencia se estudió la relación entre el trabajo eléctrico suministrado a un sistema y el calor absorbido por el conjunto agua–calorímetro.  
 El objetivo principal fue determinar el **equivalente eléctrico del calor**, verificando la proporcionalidad entre \(W_e\) y \(Q_{\text{agua}}\) mediante propagación de errores y un ajuste lineal.
 
----
 
 ### **Parte 1 — Cálculo de \(W_e\), \(Q_{\text{agua}}\) y sus incertidumbres**
 
 Se utilizaron las expresiones:
 
-\[
-W_e = V\, I\, t
-\]
+$$
+W_e = V I t
+$$
 
-\[
-Q_{\text{agua}} = (m_{\text{agua}}\, c_{\text{agua}} + m_{\text{cal}}\, c_{\text{cal}})\,\Delta T
-\]
+$$
+Q_{\text{agua}} = (m_{\text{agua}} c_{\text{agua}} + m_{\text{cal}} c_{\text{cal}})\,\Delta T
+$$
 
 Se aplicó propagación de errores para obtener las incertidumbres asociadas a cada magnitud.
 
@@ -178,7 +177,6 @@ Se aplicó propagación de errores para obtener las incertidumbres asociadas a c
 
 - [`calculo_trabajo_y_calor_con_errores.py`](./Experiencias/Experiencia_5/Scripts/calculo_trabajo_y_calor_con_errores.py)
 
----
 
 ### **Parte 2 — Ajuste lineal entre trabajo eléctrico y calor absorbido**
 
@@ -187,15 +185,18 @@ Luego se realizó:
 
 - Un ajuste lineal de la forma:
 
-\[
+$$
 W_e = a\, Q_{\text{agua}} + b
-\]
+$$
 
-- Cálculo de la pendiente \(a\), que corresponde al **equivalente eléctrico del calor**.
-- Determinación del error estándar de la pendiente.
-- Obtención del coeficiente de correlación \(R^2\).
+- Cálculo de la pendiente \(a\), correspondiente al **equivalente eléctrico del calor**.  
+- Determinación del error estándar de la pendiente.  
+- Obtención del coeficiente de correlación \(R^2\).  
 - Generación y exportación del gráfico: `grafico_trabajo_calor_parte2.png`.
 
 **Script incluido:**
 
 - [`ajuste_equivalente_electrico_calor.py`](./Experiencias/Experiencia_5/Scripts/ajuste_equivalente_electrico_calor.py)
+
+---
+
