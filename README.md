@@ -49,14 +49,6 @@ Este repositorio servirá como índice general hacia mis trabajos y proyectos:
 - **ICF130 – Termodinámica Aplicada**  
   Resolución de problemas, análisis de ciclos, cálculos de propiedades y modelación.
 
-- **FIS121 – Electromagnetismo**  
-  Cálculos, ejemplos de potencial, uso de métodos de imágenes, integrales de campo, etc.
-
-- **FIS245 – Métodos de la Física Matemática**  
-  Implementación de series, transformadas, solución de EDP y ejercicios avanzados.
-
-- **Otros cursos y proyectos relevantes**  
-  Espacio para futuras asignaturas y trabajos que desee incluir.
 
 ### 🔹 Investigación / Proyectos personales
 - **Simulaciones físicas**  
@@ -74,5 +66,3 @@ Si tienes interés en colaborar, comentar algún proyecto o utilizar parte del c
 
 ---
 
-## 📌 Nota
-Este repositorio se encuentra en desarrollo. A medida que reorganice mis códigos y proyectos, iré actualizando cada sección para mantener un portafolio limpio, claro y útil para estudiantes, académicos y profesionales.
