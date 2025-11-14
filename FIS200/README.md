@@ -314,5 +314,15 @@ $$
 
 - [`calculo_periodo_y_omega0.py`](./Experiencias/Experiencia_6/calculo_periodo_y_omega0.py)
 
----
 
+
+---
+## Experiencia 7 — Dinámica de un sistema de masas acopladas
+
+Se estudió la relación entre la posición angular $$\theta$$ y la velocidad angular $$\omega$$ de dos masas acopladas mediante mediciones experimentales.  
+Se generó una animación que muestra la evolución temporal de ambas masas.
+
+**Código utilizado:**
+
+- [`animacion_masas_acopladas.py`](./Experiencias/Experiencia_7/animacion_masas_acopladas.py)
+---
