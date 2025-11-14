@@ -49,14 +49,13 @@ Este repositorio servirá como índice general hacia mis trabajos y proyectos:
 
 - [**ICF130 – Códigos y cálculos**](./ICF130)
 
-- [**Malla Interactiva 2023 ICF (Desactualizada)**](./Malla%20Interactiva%202023%20ICF%20(Desactualizada))
+
 
 ### 🔹 Investigación / Proyectos personales
 - **Simulaciones físicas**  
   Experimentos computacionales y proyectos personales relacionados con dinámica, campos y fenómenos físicos.
 
-- **Página web personal**  
-  Proyecto donde practiqué conceptos básicos de HTML, CSS y JavaScript.
+- [**Malla Interactiva 2023 ICF (Desactualizada)**](./Malla%20Interactiva%202023%20ICF%20(Desactualizada))
 
 ---
 
