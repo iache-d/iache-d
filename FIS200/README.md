@@ -85,7 +85,7 @@ $$
 El coeficiente de difusión se obtuvo usando:
 
 $$
-D = \frac{1}{4}\,\frac{d}{dt}\langle r^2(t)\rangle
+D = \frac{1}{4} \frac{d}{dt}\langle r^2(t)\rangle
 $$
 
 **Script incluido:**
@@ -110,7 +110,7 @@ En esta experiencia se analizaron dos aspectos distintos del movimiento:
 Se utilizó la función:
 
 $$
-v(t) = a\,e^{bt} + c
+v(t) = a e^{bt} + c
 $$
 
 para ajustar los datos de tres configuraciones experimentales (esfera pequeña, mediana y grande).  
@@ -137,7 +137,7 @@ $$
 La viscosidad del fluido se estimó utilizando la ley de Stokes:
 
 $$
-\eta = \frac{2}{9}\, \frac{r^2\left(\rho_{\text{bolita}} - \rho_{\text{medio}}\right) g}{v_f}
+\eta = \frac{2}{9} \frac{r^2\left(\rho_{\text{bolita}} - \rho_{\text{medio}}\right) g}{v_f}
 $$
 
 El segundo script:
