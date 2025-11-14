@@ -42,13 +42,14 @@ Bienvenido a mi repositorio principal. Aquí organizo mis proyectos, códigos ac
 
 Este repositorio servirá como índice general hacia mis trabajos y proyectos:
 
-### 🔹 Códigos por curso
-- **FIS200 – Códigos y simulaciones**  
-  Scripts, gráficos, herramientas numéricas y experimentos computacionales usados durante el curso.
+### 🔹 Códigos 
+- [**FIS200 – Códigos y cálculos**](./FIS200)
+  
+- [**INF230 – Códigos**](./INF230)
 
-- **ICF130 – Termodinámica Aplicada**  
-  Resolución de problemas, análisis de ciclos, cálculos de propiedades y modelación.
+- [**ICF130 – Códigos y cálculos**](./ICF130)
 
+- [**Malla Interactiva 2023 ICF (Desactualizada)**](./Malla%20Interactiva%202023%20ICF%20(Desactualizada))
 
 ### 🔹 Investigación / Proyectos personales
 - **Simulaciones físicas**  
