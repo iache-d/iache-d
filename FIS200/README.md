@@ -37,5 +37,4 @@ Los objetivos principales fueron:
 
 ---
 
-## 🔧 Estructura del repositorio
 
