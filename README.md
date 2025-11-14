@@ -5,13 +5,13 @@ Bienvenido a mi repositorio principal. Aquí organizo mis proyectos, códigos ac
 ---
 
 ## 📚 Áreas de interés
-- Electromagnetismo  
-- Mecánica cuántica  
-- Métodos matemáticos en física  
-- Análisis numérico  
-- Termodinámica aplicada  
+- Propulsión Plasmática 
+- Resistencia de Materiales
+- Sistemas Caóticos
+- Gravitación
 - Simulación computacional  
 - Modelación física
+
 
 ---
 
