@@ -307,7 +307,7 @@ La incertidumbre asociada se estimó como:
 
 $$
 \Delta \omega_0 =
-\frac{2\pi}{T^2} \, \Delta T
+\frac{2\pi}{T^2} \Delta T
 $$
 
 **Código utilizado:**
