@@ -96,7 +96,6 @@ $$
 
 ---
 
----
 
 ## **Experiencia 4 — Ajuste exponencial y determinación de viscosidad**
 
