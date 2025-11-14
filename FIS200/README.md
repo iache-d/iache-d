@@ -42,9 +42,9 @@ $$
 v(t) = v_0 + a t
 $$
   - Velocidad con roce lineal usando:
-    $$
-    v(t) = v_f + (v_0 - v_f)e^{-\gamma t}
-    $$
+$$
+v(t) = v_f + (v_0 - v_f)e^{-\gamma t}
+$$
   Además, genera un gráfico comparativo entre los tres casos.
 
 ---
@@ -196,9 +196,9 @@ Se identificaron los máximos de la señal para obtener los períodos consecutiv
 
 - Se calculó el período promedio $T$
 - Se obtuvo la frecuencia angular natural:
-  $$
-  \omega_0 = \frac{2\pi}{T}
-  $$
+$$
+\omega_0 = \frac{2\pi}{T}
+$$
 
 La incertidumbre asociada se estimó como:
 $$
