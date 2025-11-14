@@ -96,4 +96,61 @@ $$
 
 ---
 
+---
+
+## **Experiencia 4 — Ajuste exponencial y determinación de viscosidad**
+
+En esta experiencia se analizaron dos aspectos distintos del movimiento:
+
+1. El ajuste exponencial de velocidades para tres esferas de distinto tamaño.
+2. La determinación de la viscosidad de un fluido a partir de mediciones de velocidad terminal.
+
+
+### **Ajuste exponencial de las velocidades**
+
+Se utilizó la función:
+
+$$
+v(t) = a\,e^{bt} + c
+$$
+
+para ajustar los datos de tres configuraciones experimentales (esfera pequeña, mediana y grande).  
+El primer script:
+
+- Realiza el ajuste de cada conjunto de datos.
+- Genera curvas suavizadas.
+- Exporta un gráfico comparativo.
+
+**Script:**  
+[`ajuste_exponencial_esferas.py`](./Experiencias/Experiencia_4/Scripts/ajuste_exponencial_esferas.py)
+
+
+### **Determinación de la viscosidad**
+
+A partir de las mediciones de velocidad vertical $v_y(t)$ en múltiples lanzamientos, se calculó el desplazamiento final y la velocidad terminal de cada prueba.
+
+La densidad de la bolita se obtuvo mediante:
+
+$$
+\rho_{\text{bolita}} = \frac{m}{\frac{4}{3}\pi r^3}
+$$
+
+La viscosidad del fluido se estimó utilizando la ley de Stokes:
+
+$$
+\eta = \frac{2}{9}\, \frac{r^2\left(\rho_{\text{bolita}} - \rho_{\text{medio}}\right) g}{v_f}
+$$
+
+El segundo script:
+
+- Lee cinco archivos experimentales.
+- Grafica las velocidades $v_y(t)$.
+- Calcula las velocidades terminales.
+- Obtiene $\eta$ para cada lanzamiento.
+- Calcula el promedio y su error estándar.
+
+**Script:**  
+[`viscosidad_stokes_lanzamientos.py`](./Experiencias/Experiencia_4/Scripts/viscosidad_stokes_lanzamientos.py)
+
+---
 
