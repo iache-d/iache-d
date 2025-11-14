@@ -151,8 +151,6 @@ El segundo script:
 **Script:**  
 [`viscosidad_stokes_lanzamientos.py`](./Experiencias/Experiencia_4/Scripts/viscosidad_stokes_lanzamientos.py)
 
----
-
 ## Experiencia 5 — Equivalente eléctrico del calor
 
 En esta experiencia se estudió la relación entre el trabajo eléctrico entregado al sistema y el calor absorbido por el conjunto agua–calorímetro.  
@@ -173,14 +171,14 @@ W_e = V I t
 $$
 
 $$
-Q_{agua} = (m_{agua}\, c_{agua} + m_{cal}\, c_{cal})\, \Delta T
+Q_{agua} = (m_{agua} c_{agua} + m_{cal} c_{cal})\, \Delta T
 $$
 
 Se aplicó propagación de errores a ambas magnitudes.
 
 **Script incluido:**
 
-- `calculo_trabajo_y_calor_con_errores.py`
+- [`calculo_trabajo_y_calor_con_errores.py`](./Experiencias/Experiencia_5/calculo_trabajo_y_calor_con_errores.py)
 
 ### Parte 2 — Ajuste lineal entre trabajo eléctrico y calor absorbido
 
@@ -200,7 +198,121 @@ A partir del ajuste se obtuvo:
 
 **Script incluido:**
 
-- `ajuste_equivalente_electrico_calor.py`
+- [`ajuste_equivalente_electrico_calor.py`](./Experiencias/Experiencia_5/ajuste_equivalente_electrico_calor.py)
+
+
+# Experiencia 6 — Oscilaciones y análisis dinámico
+
+En esta experiencia se estudió el comportamiento oscilatorio de un sistema masa–resorte mediante el análisis de datos experimentales de posición en función del tiempo.  
+Se determinaron:
+
+- El período de oscilación  
+- La frecuencia angular natural $$\omega_0$$  
+- El coeficiente de amortiguamiento $$b$$  
+- La constante elástica $$K$$  
+- Las incertidumbres mediante propagación de errores  
+
+A continuación se describen las partes de la experiencia y los códigos utilizados.
+
+
+## Parte 1 — Gráfico posición–tiempo
+
+Se procesaron los datos experimentales para graficar:
+
+$$
+x(t)
+$$
+
+El script convierte los datos del archivo de texto a arreglos numéricos y genera la figura correspondiente.
+
+**Código utilizado:**
+
+- [`grafico_posicion_tiempo.py`](./Experiencias/Experiencia_6/grafico_posicion_tiempo.py)
+
+
+## Parte 2 — Cálculo de $$b$$ e incertidumbre
+
+Se usó la ecuación:
+
+$$
+b = \frac{2m}{B}
+$$
+
+Con propagación de incertidumbres:
+
+$$
+\Delta b = b \sqrt{
+\left( \frac{\Delta B}{B} \right)^2 +
+\left( \frac{\Delta m}{m} \right)^2
+}
+$$
+
+**Código utilizado:**
+
+- [`calculo_b_con_errores.py`](./Experiencias/Experiencia_6/calculo_b_con_errores.py)
+
+
+## Parte 3 — Cálculo de $$\omega$$ y su incertidumbre
+
+La frecuencia angular amortiguada se calculó como:
+
+$$
+\omega = \sqrt{
+\omega_0^2 -
+\left( \frac{b}{2m} \right)^2
+}
+$$
+
+La incertidumbre se determinó mediante derivadas parciales aplicadas a la fórmula anterior.
+
+**Código utilizado:**
+
+- [`calculo_omega_con_errores.py`](./Experiencias/Experiencia_6/calculo_omega_con_errores.py)
+
+
+## Parte 4 — Cálculo de la constante elástica $$K$$
+
+Se empleó la expresión:
+
+$$
+K = m \, \omega_0^2
+$$
+
+Con propagación de errores:
+
+$$
+\Delta K = K \sqrt{
+\left( \frac{\Delta m}{m} \right)^2 +
+\left( 2 \frac{\Delta \omega_0}{\omega_0} \right)^2
+}
+$$
+
+**Código utilizado:**
+
+- [`calculo_K_con_errores.py`](./Experiencias/Experiencia_6/calculo_K_con_errores.py)
+
+
+## Parte 5 — Determinación experimental del período y $$\omega_0$$
+
+Se identificaron los máximos de la señal para obtener los períodos consecutivos:
+
+- Se calculó el período promedio $$T$$  
+- Se obtuvo la frecuencia angular natural:
+
+$$
+\omega_0 = \frac{2\pi}{T}
+$$
+
+La incertidumbre asociada se estimó como:
+
+$$
+\Delta \omega_0 =
+\frac{2\pi}{T^2} \, \Delta T
+$$
+
+**Código utilizado:**
+
+- [`calculo_periodo_y_omega0.py`](./Experiencias/Experiencia_6/calculo_periodo_y_omega0.py)
 
 ---
 
