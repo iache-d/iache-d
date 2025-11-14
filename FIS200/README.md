@@ -63,6 +63,25 @@ $$
 
 Además genera un gráfico comparativo entre los tres casos.
 
+---
+
+## **Experiencia 4 — Análisis del coeficiente de difusión**
+
+En esta experiencia se estudió el movimiento aleatorio de una partícula a partir de datos experimentales \( x(t) \) y \( y(t) \). Se calculó el desplazamiento cuadrático medio \( \langle r^2(t) \rangle \), se realizó un ajuste lineal y se obtuvo el coeficiente de difusión mediante:
+
+$$
+D = \frac{1}{4}\,\frac{d}{dt}\langle r^2(t) \rangle
+$$
+
+**Script incluido:**
+
+- **[`analisis_coeficiente_difusion.py`](./Experiencias/Experiencia_4/Scripts/analisis_coeficiente_difusion.py)**  
+  Procesa los datos experimentales, calcula \( r(t) \), \( r^2(t) \), su promedio, el error, ajusta una recta a los datos y obtiene el coeficiente de difusión con su incertidumbre.  
+  También genera y exporta un gráfico comparativo entre los datos y el ajuste.
+
+---
+
+
 
 
 ---
