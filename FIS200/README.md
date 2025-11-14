@@ -38,9 +38,9 @@ Se implementó un único script que calcula las expresiones de velocidad para ca
 
 - [`analisis_velocidad_con_y_sin_roce.py`](./Experiencias/Experiencia_2/Scripts/analisis_velocidad_con_y_sin_roce.py): Contiene el cálculo de:
   - Velocidad sin roce usando:
-    $$
-    v(t) = v_0 + a t
-    $$
+$$
+v(t) = v_0 + a t
+$$
   - Velocidad con roce lineal usando:
     $$
     v(t) = v_f + (v_0 - v_f)e^{-\gamma t}
