@@ -153,47 +153,54 @@ El segundo script:
 
 ---
 
-## **Experiencia 5 — Equivalente eléctrico del calor**
+## Experiencia 5 — Equivalente eléctrico del calor
 
 En esta experiencia se estudió la relación entre el trabajo eléctrico entregado al sistema y el calor absorbido por el conjunto agua–calorímetro.  
-El objetivo fue determinar el **equivalente eléctrico del calor**, verificando la proporcionalidad entre \(W_e\) y \(Q_{agua}\) mediante propagación de errores y un ajuste lineal.
+El objetivo fue determinar el equivalente eléctrico del calor verificando la proporcionalidad entre:
 
+$$
+W_e \quad \text{y} \quad Q_{agua}
+$$
 
-### **Parte 1 — Cálculo de \(W_e\), \(Q_{agua}\) y sus incertidumbres**
+mediante propagación de errores y un ajuste lineal.
 
-Se utilizaron las expresiones:
+### Parte 1 — Cálculo de $$W_e$$, $$Q_{agua}$$ y sus incertidumbres
+
+Las expresiones utilizadas fueron:
 
 $$
 W_e = V I t
 $$
 
 $$
-Q_{agua} = (m_{agua} c_{agua} + m_{cal} c_{cal})\, \Delta T
+Q_{agua} = (m_{agua}\, c_{agua} + m_{cal}\, c_{cal})\, \Delta T
 $$
 
-Se aplicó propagación de errores para obtener las incertidumbres asociadas.
+Se aplicó propagación de errores a ambas magnitudes.
 
 **Script incluido:**
 
-- [`calculo_trabajo_y_calor_con_errores.py`](./Experiencias/Experiencia_5/Scripts/calculo_trabajo_y_calor_con_errores.py)
+- `calculo_trabajo_y_calor_con_errores.py`
 
+### Parte 2 — Ajuste lineal entre trabajo eléctrico y calor absorbido
 
-### **Parte 2 — Ajuste lineal entre trabajo eléctrico y calor absorbido**
-
-Se utilizaron valores experimentales de calor absorbido y trabajo eléctrico acumulado.  
-Luego se realizó:
-
-- Un ajuste lineal de la forma:
+Se emplearon valores experimentales de $$Q_{agua}$$ y $$W_e$$.  
+Luego se realizó un ajuste lineal del tipo:
 
 $$
 W_e = a\, Q_{agua} + b
 $$
 
-- Obtención de la pendiente \(a\), correspondiente al **equivalente eléctrico del calor**.  
-- Cálculo del error estándar de la pendiente.  
-- Obtención del coeficiente de correlación \(R^2\).  
-- Generación del gráfico: `grafico_trabajo_calor_parte2.png`.
+A partir del ajuste se obtuvo:
+
+- La pendiente $$a$$, correspondiente al equivalente eléctrico del calor.  
+- El error estándar de la pendiente.  
+- El coeficiente de correlación $$R^2$$.  
+- El gráfico final `grafico_trabajo_calor_parte2.png`.
 
 **Script incluido:**
 
-- [`ajuste_equivalente_electrico_calor.py`](./Experiencias/Experiencia_5/Scripts/ajuste_equivalente_electrico_calor.py)
+- `ajuste_equivalente_electrico_calor.py`
+
+---
+
