@@ -47,6 +47,7 @@ $$
 $$
 v(t) = v_f + (v_0 - v_f)e^{-\gamma t}
 $$
+
   Además, genera un gráfico comparativo entre los tres casos.
 
 ---
