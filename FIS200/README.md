@@ -188,7 +188,7 @@ Se emplearon valores experimentales de $$Q_{agua}$$ y $$W_e$$.
 Luego se realizó un ajuste lineal del tipo:
 
 $$
-W_e = a\, Q_{agua} + b
+W_e = a Q_{agua} + b
 $$
 
 A partir del ajuste se obtuvo:
