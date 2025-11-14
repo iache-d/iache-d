@@ -42,8 +42,8 @@ Se implementó un único script que calcula las expresiones de velocidad para ca
 $$
 v(t) = v_0 + a t
 $$
-
   - Velocidad con roce lineal usando:
+
 $$
 v(t) = v_f + (v_0 - v_f)e^{-\gamma t}
 $$
@@ -57,16 +57,19 @@ En esta experiencia se estudió el movimiento aleatorio de una partícula utiliz
 A partir de estos datos se calculó el desplazamiento radial $r(t)$, el desplazamiento cuadrático medio $\langle r^2(t)\rangle$ y se obtuvo el coeficiente de difusión mediante un ajuste lineal.
 
 La relación fundamental utilizada fue:
+
 $$
 r(t) = \sqrt{(x(t) - x_0)^2 + (y(t) - y_0)^2}
 $$
 
 Y el desplazamiento cuadrático medio:
+
 $$
 \langle r^2(t)\rangle = \frac{1}{N} \sum_{i=1}^{N} r_i^2(t)
 $$
 
 El coeficiente de difusión se obtuvo usando:
+
 $$
 D = \frac{1}{4} \frac{d}{dt}\langle r^2(t)\rangle
 $$
@@ -92,6 +95,7 @@ Se utilizó la función $v(t) = a e^{bt} + c$ para ajustar los datos de tres con
 #### Determinación de la viscosidad
 
 Se calculó el desplazamiento final y la velocidad terminal de múltiples lanzamientos. La viscosidad del fluido se estimó utilizando la ley de Stokes:
+
 $$
 \eta = \frac{2}{9} \frac{r^2\left(\rho_{\text{bolita}} - \rho_{\text{medio}}\right) g}{v_f}
 $$
@@ -109,9 +113,11 @@ Se estudió la relación entre el trabajo eléctrico ($W_e$) entregado al sistem
 #### Parte 1 — Cálculo de $W_e$, $Q_{agua}$ y sus incertidumbres
 
 Las expresiones utilizadas fueron:
+
 $$
 W_e = V I t
 $$
+
 $$
 Q_{agua} = (m_{agua} c_{agua} + m_{cal} c_{cal})\, \Delta T
 $$
@@ -145,10 +151,13 @@ Se procesaron los datos experimentales para graficar $x(t)$.
 #### Parte 2 — Cálculo de $b$ e incertidumbre
 
 Se usó la ecuación:
+
 $$
 b = \frac{2m}{B}
 $$
+
 Con propagación de incertidumbres:
+
 $$
 \Delta b = b \sqrt{
 \left( \frac{\Delta B}{B} \right)^2 +
@@ -163,6 +172,7 @@ $$
 #### Parte 3 — Cálculo de $\omega$ y su incertidumbre
 
 La frecuencia angular amortiguada se calculó como:
+
 $$
 \omega = \sqrt{
 \omega_0^2 -
@@ -177,10 +187,13 @@ $$
 #### Parte 4 — Cálculo de la constante elástica $K$
 
 Se empleó la expresión:
+
 $$
 K = m \, \omega_0^2
 $$
+
 Con propagación de errores:
+
 $$
 \Delta K = K \sqrt{
 \left( \frac{\Delta m}{m} \right)^2 +
@@ -198,11 +211,13 @@ Se identificaron los máximos de la señal para obtener los períodos consecutiv
 
 - Se calculó el período promedio $T$
 - Se obtuvo la frecuencia angular natural:
+
 $$
 \omega_0 = \frac{2\pi}{T}
 $$
 
 La incertidumbre asociada se estimó como:
+
 $$
 \Delta \omega_0 =
 \frac{2\pi}{T^2} \Delta T
