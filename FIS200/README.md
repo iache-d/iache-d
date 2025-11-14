@@ -142,7 +142,17 @@ Se procesaron los datos experimentales para graficar $x(t)$.
 
 #### Parte 2 — Cálculo de $b$ e incertidumbre
 
-Se usó la ecuación $b = 2m/B$ y su correspondiente propagación de incertidumbres.
+Se usó la ecuación:
+$$
+b = \frac{2m}{B}
+$$
+Con propagación de incertidumbres:
+$$
+\Delta b = b \sqrt{
+\left( \frac{\Delta B}{B} \right)^2 +
+\left( \frac{\Delta m}{m} \right)^2
+}
+$$
 
 **Script:**
 
@@ -152,7 +162,10 @@ Se usó la ecuación $b = 2m/B$ y su correspondiente propagación de incertidumb
 
 La frecuencia angular amortiguada se calculó como:
 $$
-\omega = \sqrt{ \omega_0^2 - \left( \frac{b}{2m} \right)^2 }
+\omega = \sqrt{
+\omega_0^2 -
+\left( \frac{b}{2m} \right)^2
+}
 $$
 
 **Script:**
@@ -161,7 +174,17 @@ $$
 
 #### Parte 4 — Cálculo de la constante elástica $K$
 
-Se empleó la expresión $K = m \, \omega_0^2$ con su propagación de errores.
+Se empleó la expresión:
+$$
+K = m \, \omega_0^2
+$$
+Con propagación de errores:
+$$
+\Delta K = K \sqrt{
+\left( \frac{\Delta m}{m} \right)^2 +
+\left( 2 \frac{\Delta \omega_0}{\omega_0} \right)^2
+}
+$$
 
 **Script:**
 
@@ -169,7 +192,19 @@ Se empleó la expresión $K = m \, \omega_0^2$ con su propagación de errores.
 
 #### Parte 5 — Determinación experimental del período y $\omega_0$
 
-Se identificaron los máximos de la señal para obtener el período promedio $T$ y $\omega_0 = 2\pi/T$.
+Se identificaron los máximos de la señal para obtener los períodos consecutivos:
+
+- Se calculó el período promedio $T$
+- Se obtuvo la frecuencia angular natural:
+  $$
+  \omega_0 = \frac{2\pi}{T}
+  $$
+
+La incertidumbre asociada se estimó como:
+$$
+\Delta \omega_0 =
+\frac{2\pi}{T^2} \Delta T
+$$
 
 **Script:**
 
