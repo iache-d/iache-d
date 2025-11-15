@@ -7,53 +7,54 @@ Cada certamen o tarea incluye los scripts relevantes y una breve descripción de
 
 ## 🔹 C1 Numérico: Análisis de Ciclo Termodinámico
 
-Este proyecto corresponde a la parte numérica del Certamen 1. El análisis se presenta como un **Jupyter Notebook** (`.ipynb`) que compara un ciclo termodinámico de 5 etapas para un Gas Ideal (IG) versus un Gas de Van der Waals (VdW).
+Este proyecto corresponde a la parte numérica del Certamen 1. El script de Python analiza un ciclo termodinámico de 5 etapas para un mol de un gas diatómico, comparando el comportamiento de un **Gas Ideal (IG)** con un **Gas de Van der Waals (VdW)**.
 
-El notebook principal se encuentra en: [`analisis_ciclo_termo.py`](<./C1Numérico/analisis_ciclo_termo.py>)
+El script principal se encuentra en: [`analisis_ciclo_termo.py`](./C1Numérico/analisis_ciclo_termo.py)
 
-### 🧠 Estructura del Notebook
+### 🧠 Lógica del Script
 
-El notebook está dividido en 5 células de ejecución principales que deben correrse en orden:
+El análisis se realiza en cuatro etapas principales:
 
-**1. Célula 1: Configuración y Modelos**
-* Importa las bibliotecas necesarias (`numpy`, `matplotlib`, `scipy`).
-* Define las constantes globales (R, n) y los datos iniciales del ciclo (T1, P1, P2, T3, P4).
-* Define las ecuaciones de estado para el Gas Ideal (`P_ideal`) y Van der Waals (`P_vdw`).
-* Carga los datos experimentales sintéticos para el ajuste.
+**1. Ajuste de Parámetros VdW**
+* Utiliza `scipy.optimize.least_squares` para ajustar los parámetros `a` y `b` de la ecuación de Van der Waals a un conjunto de datos experimentales sintéticos (P, V, T).
+* Calcula los intervalos de confianza y la métrica de ajuste R² para validar el modelo.
 
-**2. Célula 2: Ajuste de Parámetros VdW**
-* Utiliza `scipy.optimize.least_squares` para ajustar los parámetros `a` y `b` de la ecuación de Van der Waals a los datos experimentales.
-* Imprime los valores óptimos de `a` y `b` y sus métricas de ajuste (R²).
+**2. Cálculo de Estados del Ciclo**
+* Define un ciclo de 5 estados (1→2 adiabático, 2→3 isocórico, 3→4 isotermo, 4→5 isobárico, 5→1 isocórico).
+* Resuelve analíticamente los estados para el Gas Ideal.
+* Utiliza `scipy.optimize.fsolve` para resolver el sistema de ecuaciones no lineales (termodinámicas y de estado VdW) y encontrar las coordenadas (T, P, V) en cada estado para el modelo de Van der Waals.
 
-**3. Célula 3: Cálculo de Estados del Ciclo**
-* Resuelve el ciclo de 5 estados (adiabático, isocórico, isotermo, isobárico, isocórico).
-* Resuelve los estados analíticamente para el Gas Ideal.
-* Utiliza `scipy.optimize.fsolve` para resolver numéricamente el sistema de ecuaciones para el modelo de Van der Waals.
-* Imprime y muestra tablas comparativas (usando `pandas`) de (T, P, V) para cada estado.
+**3. Análisis Termodinámico (W, Q, η)**
+* Calcula el Trabajo (W) y el Calor (Q) para cada una de las 5 etapas del ciclo, tanto para IG como para VdW.
+* Para VdW, el trabajo en procesos no isocóricos se calcula integrando numéricamente $P(T, V) dV$ usando `np.trapezoid`.
+* Suma los valores para obtener el Trabajo Neto (`W_net`) y el Calor Neto (`Q_net`).
+* Calcula la eficiencia térmica ($\eta = W_{net} / Q_{in}$) del ciclo para ambos modelos.
 
-**4. Célula 4: Análisis Termodinámico (W, Q, η)**
-* Define funciones para calcular el Trabajo (W) y el Calor (Q) para cada tipo de proceso (adiabático, isotermo, etc.) para ambos modelos.
-* Calcula `W_net`, `Q_net` y la eficiencia térmica ($\eta$) del ciclo completo para IG y VdW.
-* Imprime un resumen de los resultados.
-
-**5. Célula 5: Visualización Comparativa**
-* Utiliza `matplotlib` para generar los gráficos P-V y T-V.
-* Superpone las curvas del ciclo para el Gas Ideal (línea azul) y el Gas de Van der Waals (línea roja punteada) para una comparación visual.
+**4. Visualización Comparativa**
+* Utiliza `matplotlib` para generar gráficos P-V y T-V.
+* Superpone las curvas del ciclo para el Gas Ideal y el Gas de Van der Waals, permitiendo una comparación visual directa de las desviaciones del comportamiento ideal.
 
 ---
 
 ### 🛠️ Bibliotecas y Ejecución
 
-El notebook requiere `numpy`, `matplotlib`, `scipy` y `pandas` (para las tablas).
+El script requiere `numpy`, `matplotlib` y `scipy`.
 
 1.  **Instalación (si es necesario):**
     ```bash
-    pip install numpy matplotlib scipy pandas jupyter
+    pip install numpy matplotlib scipy
     ```
 
 2.  **Ejecución:**
-    Navega a la carpeta `ICF130` y ejecuta Jupyter:
+    Simplemente ejecuta el script en una terminal desde la carpeta `C1Numérico`:
     ```bash
-    jupyter notebook
+    python analisis_ciclo_termo.py
     ```
-    Luego, abre el archivo `C1Numérico/analisis_ciclo_termo.ipynb` desde el navegador y ejecuta las células en orden (Run All).
+
+3.  **Resultados:**
+    El script imprimirá en la consola:
+    * Los parámetros `a` y `b` de VdW ajustados.
+    * Tablas con los valores de (T, P, V) para cada estado (IG y VdW).
+    * Tablas con los valores de W y Q para cada proceso (IG y VdW).
+    * Los valores netos y la eficiencia (η) de ambos modelos.
+    * Mostrará las ventanas de `matplotlib` con los gráficos P-V y T-V.
