@@ -58,3 +58,24 @@ El script requiere `numpy`, `matplotlib` y `scipy`.
     * Tablas con los valores de W y Q para cada proceso (IG y VdW).
     * Los valores netos y la eficiencia (η) de ambos modelos.
     * Mostrará las ventanas de `matplotlib` con los gráficos P-V y T-V.
+  
+    
+---
+
+## 🔹 Laboratorios
+
+Scripts de análisis para los laboratorios del curso.
+
+### Laboratorio 1: Termómetro de Gas y Ley de Gas Ideal
+
+Este script analiza los datos de un experimento de termómetro de gas a volumen constante, comparando su comportamiento con la ley de gas ideal.
+
+El script principal se encuentra en: [`./Laboratorios/analisis_termometro_gas.py`](./Laboratorios/analisis_termometro_gas.py)
+
+**Lógica del Script:**
+1.  **Calibración PT100:** Realiza un ajuste lineal (`scipy.stats.linregress`) a los datos de (T, R) para calibrar el sensor PT100 y obtener su $R_0$ y $\alpha$.
+2.  **Cálculo de Presión:** Convierte las mediciones de altura de la columna de mercurio (`h_mercurio`) a Presión (Pa), usando la densidad del mercurio y la presión atmosférica.
+3.  **Comparación (Ley de Gay-Lussac):** Calcula la presión teórica (`P_ideal`) que el gas debería tener en cada temperatura si siguiera la ley de gas ideal ($P \propto T$).
+4.  **Visualización:** Genera 3 gráficos comparativos, incluyendo `R vs T` (calibración) y `P_medida vs P_ideal` (verificación de la ley).
+
+---
