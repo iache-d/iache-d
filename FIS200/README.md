@@ -23,7 +23,7 @@ Los objetivos principales fueron:
 - [`calculo_k_y_error.py`](./Experiencias/Experiencia_1/calculo_k_y_error.py): Cálculo de $K$, su desviación estándar y propagación de errores.
 - [`trayectoria_0_grados.py`](./Experiencias/Experiencia_1/trayectorias_0deg_promedio.py): Lectura de datos a 0°, normalización de coordenadas, graficación de trayectorias y tendencia promedio.
 - [`trayectoria_30_grados.py`](./Experiencias/Experiencia_1/trayectorias_30deg_ajuste.py): Procesamiento de datos a 30°, ajuste cuadrático promedio y comparación con la curva teórica.
-- [`promedio_y_desviacion.py`](./Experiencias/Experiencia_1/promedio_y_desviacion.py): Cálculo de promedios y desviaciones estándar para distancias medidas.
+- [`promedio_y_desviacion.py`](./Experiencias/Experiencia_1/estadistica_distancias.py): Cálculo de promedios y desviaciones estándar para distancias medidas.
 - [`distancias_teoricas_vs_experimentales.py`](./Experiencias/Experiencia_1/distancias_teoricas_vs_experimentales.py): Cálculo de distancias teóricas (15°, 30°, 45°) con propagación de errores y comparación experimental.
 
 ---
