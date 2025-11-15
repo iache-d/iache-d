@@ -55,7 +55,7 @@ Este repositorio servirá como índice general hacia mis trabajos y proyectos:
 - **Simulaciones físicas**  
   Experimentos computacionales y proyectos personales relacionados con dinámica, campos y fenómenos físicos.
 
-- [**Malla Interactiva 2023 ICF (Desactualizada)**]([./Malla%20Interactiva%202023%20ICF%20(Desactualizada)](https://github.com/iache-d/malla-interactiva-icf))
+- [**Malla Interactiva 2023 ICF (Desactualizada)**](https://github.com/iache-d/malla-interactiva-icf)
 
 ---
 
