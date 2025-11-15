@@ -9,7 +9,7 @@ Cada certamen o tarea incluye los scripts relevantes y una breve descripción de
 
 Este proyecto corresponde a la parte numérica del Certamen 1. El análisis se presenta como un **Jupyter Notebook** (`.ipynb`) que compara un ciclo termodinámico de 5 etapas para un Gas Ideal (IG) versus un Gas de Van der Waals (VdW).
 
-El notebook principal se encuentra en: [`analisis_ciclo_termo.ipynb`](<./C1Numérico/analisis_ciclo_termo.ipynb>)
+El notebook principal se encuentra en: [`analisis_ciclo_termo.py`](<./C1Numérico/analisis_ciclo_termo.py>)
 
 ### 🧠 Estructura del Notebook
 
