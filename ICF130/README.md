@@ -70,7 +70,7 @@ Scripts de análisis para los laboratorios del curso.
 
 Este script analiza los datos de un experimento de termómetro de gas a volumen constante, comparando su comportamiento con la ley de gas ideal.
 
-El script principal se encuentra en: [`./Laboratorios/analisis_termometro_gas.py`](./Laboratorios/analisis_termometro_gas.py)
+El script principal se encuentra en: [`analisis_termometro_gas.py`](./Laboratorio/analisis_termometro_gas.py)
 
 **Lógica del Script:**
 1.  **Calibración PT100:** Realiza un ajuste lineal (`scipy.stats.linregress`) a los datos de (T, R) para calibrar el sensor PT100 y obtener su $R_0$ y $\alpha$.
