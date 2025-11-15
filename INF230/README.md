@@ -9,7 +9,7 @@ Cada tarea incluye los scripts relevantes y una breve descripción del objetivo 
 
 Este programa de consola, desarrollado en C++, calcula el número total de personas (asistentes y empleados) presentes en un evento en una hora específica, basándose en registros de entrada y salida de dos archivos fuente distintos.
 
-El script principal se encuentra en: [`./Tarea 1/gestor_asistencia.cpp`](<./Tarea 1/gestor_asistencia.cpp>)
+El script principal se encuentra en: [`gestor_asistencia.cpp`](<./Tarea 1/gestor_asistencia.cpp>)
 
 ### 🚀 Características
 
