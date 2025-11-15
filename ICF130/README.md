@@ -78,4 +78,15 @@ El script principal se encuentra en: [`analisis_termometro_gas.py`](./Laboratori
 3.  **Comparación (Ley de Gay-Lussac):** Calcula la presión teórica (`P_ideal`) que el gas debería tener en cada temperatura si siguiera la ley de gas ideal ($P \propto T$).
 4.  **Visualización:** Genera 3 gráficos comparativos, incluyendo `R vs T` (calibración) y `P_medida vs P_ideal` (verificación de la ley).
 
+### Laboratorio 2: Calores Latentes de Fusión y Vaporización
+
+Estos scripts analizan los datos de un calorímetro eléctrico para determinar los calores latentes de fusión y vaporización del agua.
+
+**Parte 1: Calor Latente de Fusión ($L_f$)**
+* **Script:** [`./Laboratorios/analisis_calor_fusion.py`](./Laboratorios/analisis_calor_fusion.py)
+* **Lógica:** Determina $L_f$ midiendo la energía eléctrica ($Q = V \cdot I \cdot t$) suministrada durante la meseta de fusión (0°C) para una masa de hielo conocida ($L_f = Q / m_{\text{hielo}}$).
+
+**Parte 2: Calor Latente de Vaporización ($L_v$)**
+* **Script:** [`./Laboratorios/analisis_calor_vaporizacion.py`](./Laboratorios/analisis_calor_vaporizacion.py)
+* **Lógica:** Determina $L_v$ midiendo la energía suministrada durante la meseta de ebullición ($\Delta Q$) y dividiéndola por la masa de agua evaporada ($\Delta m_{\text{evap}}$) durante ese tiempo ($L_v = \Delta Q / \Delta m_{\text{evap}}$).
 ---
