@@ -236,7 +236,7 @@ Se estudió la relación entre la posición angular $\theta$ y la velocidad angu
 
 **Script Relevante:**
 
-- [`animacion_masas_acopladas.py`](./Experiencias/Experiencia_7/animacion_masas_acopladas.py): Genera la animación que muestra la evolución temporal de ambas masas.
+- [`animacion_masas_acopladas.py`](./Experiencias/Experiencia_7): Genera la animación que muestra la evolución temporal de ambas masas.
 
 ---
 
