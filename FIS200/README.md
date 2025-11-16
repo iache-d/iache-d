@@ -36,7 +36,7 @@ Se implementó un único script que calcula las expresiones de velocidad para ca
 
 **Script Relevante:**
 
-- [`analisis_velocidad_con_y_sin_roce.py`](./Experiencias/Experiencia_2/Scripts/analisis_velocidad_con_y_sin_roce.py): Contiene el cálculo de:
+- [`analisis_velocidad_con_y_sin_roce.py`](./Experiencias/Experiencia_2/analisis_velocidad_con_y_sin_roce.py): Contiene el cálculo de:
   - Velocidad sin roce usando:
 
 $$
