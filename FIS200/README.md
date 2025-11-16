@@ -77,7 +77,7 @@ $$
 
 **Script Relevante:**
 
-- [`analisis_coeficiente_difusion.py`](./Experiencias/Experiencia_3/Scripts/analisis_coeficiente_difusion.py): Procesa los datos, calcula $r(t)$, $\langle r^2(t)\rangle$, su error estándar, realiza un ajuste lineal y determina $D$ con su incertidumbre.
+- [`analisis_coeficiente_difusion.py`](./Experiencias/Experiencia_3/analisis_coeficiente_difusion.py): Procesa los datos, calcula $r(t)$, $\langle r^2(t)\rangle$, su error estándar, realiza un ajuste lineal y determina $D$ con su incertidumbre.
 
 ---
 
