@@ -133,7 +133,7 @@ Se emplearon valores experimentales de $Q_{agua}$ y $W_e$ para realizar un ajust
 
 **Script Relevante:**
 
-- [`ajuste_equivalente_electrico_calor.py`](./Experiencias/Experiencia_5/ajuste_equivalente_electrico_calor.py): Realiza el ajuste lineal, obtiene la pendiente $a$, su error estándar, $R^2$ y genera el gráfico final.
+- [`ajuste_equivalente_electrico_calor.py`](./Experiencias/Experiencia_5/ajuste_equivalente_electrico_calor.py.py): Realiza el ajuste lineal, obtiene la pendiente $a$, su error estándar, $R^2$ y genera el gráfico final.
 
 ---
 
