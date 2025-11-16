@@ -91,7 +91,7 @@ Se utilizó la función $v(t) = a e^{bt} + c$ para ajustar los datos de tres con
 
 **Script Relevante:**
 
-- [`ajuste_exponencial_esferas.py`](./Experiencias/Experiencia_4/Scripts/ajuste_exponencial_esferas.py): Realiza el ajuste de cada conjunto de datos, genera curvas suavizadas y exporta un gráfico comparativo.
+- [`ajuste_exponencial_esferas.py`](FIS200/Experiencias/Experiencia_4/ajuste_exponencial_esferas.py): Realiza el ajuste de cada conjunto de datos, genera curvas suavizadas y exporta un gráfico comparativo.
 
 #### Determinación de la viscosidad
 
@@ -103,7 +103,7 @@ $$
 
 **Script Relevante:**
 
-- [`viscosidad_stokes_lanzamientos.py`](./Experiencias/Experiencia_4/Scripts/viscosidad_stokes_lanzamientos.py): Lee cinco archivos, grafica $v_y(t)$, calcula velocidades terminales, obtiene $\eta$ para cada lanzamiento y calcula el promedio con su error.
+- [`viscosidad_stokes_lanzamientos.py`](./Experiencias/Experiencia_4/viscosidad_stokes_lanzamientos.py): Lee cinco archivos, grafica $v_y(t)$, calcula velocidades terminales, obtiene $\eta$ para cada lanzamiento y calcula el promedio con su error.
 
 ---
 
