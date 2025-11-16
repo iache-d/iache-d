@@ -5,6 +5,27 @@ Cada certamen o tarea incluye los scripts relevantes y una breve descripción de
 
 ---
 
+## 🔹 Tareas
+
+### Tarea 1: Simulación de Dinámica de Fluidos
+
+Este script modela la dinámica de la altura (`h`) de un fluido en un depósito cilíndrico. El sistema está sujeto a múltiples flujos de entrada y salida, algunos constantes, otros variables con el tiempo y otros dependientes de la altura del fluido.
+
+El script principal se encuentra en: [`simulacion_deposito_fluido.py`](<./Tarea 1/simulacion_deposito_fluido.py>)
+
+**Lógica del Script:**
+1.  **Modelo Físico:** Define una Ecuación Diferencial Ordinaria (EDO) basada en la ley de continuidad para el depósito: $dh/dt = (Q_{\text{in}} - Q_{\text{out}}) / A_{\text{tanque}}$.
+2.  **Flujos Complejos:** Los caudales (flujos) son no lineales:
+    * $Q_A$ depende de $\sqrt{2 - h^4}$.
+    * $Q_B$ varía con el tiempo, $\propto \cos(\pi t)$.
+    * $Q_D$ (salida) sigue la ley de Torricelli, $\propto \sqrt{h}$.
+3.  **Solución Numérica:** Utiliza `scipy.integrate.solve_ivp` con un método Runge-Kutta (RK45) para resolver la EDO y encontrar la función $h(t)$ para un estado inicial $h_0 = 0.5$ m.
+4.  **Visualización:** Genera un gráfico de $h(t)$ vs. Tiempo, mostrando la evolución de la altura del fluido.
+
+
+
+---
+
 ## 🔹 C1 Numérico: Análisis de Ciclo Termodinámico
 
 Este proyecto corresponde a la parte numérica del Certamen 1. El script de Python analiza un ciclo termodinámico de 5 etapas para un mol de un gas diatómico, comparando el comportamiento de un **Gas Ideal (IG)** con un **Gas de Van der Waals (VdW)**.
