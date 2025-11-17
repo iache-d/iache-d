@@ -68,7 +68,7 @@ t_eval = np.linspace(t_span[0], t_span[1], 500)
 # Llamar al solucionador
 print("Iniciando la simulación numérica...")
 sol = solve_ivp(
-    modelo, t_span, h0, t_eval=t_eval, method="RK45"  # Método estándar (Runge-Kutta)
+    modelo, t_span, h0, t_eval=t_eval, method="RK45", rtol=1e-6  # Método estándar (Runge-Kutta)
 )
 print("Simulación completada.")
 
