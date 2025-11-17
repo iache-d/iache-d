@@ -19,7 +19,7 @@ A_B = np.pi * R_B**2  # m^2
 Q_C = 0.0008  # m^3/s
 
 # Tubería D (Asumiendo D_D = D_A = 38 cm)
-D_D = 0.38  # m
+D_D = 0.30  # m
 R_D = D_D / 2
 A_D = np.pi * R_D**2  # m^2
 
