@@ -49,6 +49,8 @@ Este repositorio servirá como índice general hacia mis trabajos y proyectos:
 
 - [**ICF130 – Códigos y cálculos**](./ICF130)
 
+- [**FIS230 – Códigos y cálculos**](./FIS230)
+
 
 
 ### 🔹 Investigación / Proyectos personales
