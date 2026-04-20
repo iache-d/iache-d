@@ -59,6 +59,9 @@ Este repositorio servirá como índice general hacia mis trabajos y proyectos:
 
 - [**Malla Interactiva 2023 ICF (Desactualizada)**](https://github.com/iache-d/malla-interactiva-icf)
 
+- [**Modelo de Propulsor AF-MPD**](https://github.com/iache-d/AF-MPD)
+
+
 ---
 
 ## 📬 Contacto
