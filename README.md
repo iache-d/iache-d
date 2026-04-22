@@ -51,6 +51,8 @@ Este repositorio servirá como índice general hacia mis trabajos y proyectos:
 
 - [**FIS230 – Códigos y cálculos**](./FIS230)
 
+- [**FIS205 – Códigos y cálculos**](./FIS205)
+
 
 
 ### 🔹 Investigación / Proyectos personales
