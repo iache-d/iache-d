@@ -53,7 +53,9 @@ Este repositorio servirá como índice general hacia mis trabajos y proyectos:
 
 - [**FIS205 – Códigos**](./FIS205)
 
+- [**FIS223 – Códigos y Cálculos**](./FIS223)
 
+- [**ICF140 – Tareas**](./ICF140)
 
 ### 🔹 Investigación / Proyectos personales
 - **Simulaciones físicas**  
