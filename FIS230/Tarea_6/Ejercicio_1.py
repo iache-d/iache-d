@@ -30,7 +30,7 @@ plt.figure(figsize=(9, 6))
 
 plt.plot(t_datos, senal_datos, 'ko', label='Datos experimentales (TOF)')
 plt.plot(t_continuo, senal_ajustada, 'r-', linewidth=2, 
-         label=f'Ajuste modelo: $I(t) = {C_opt:.2f} t^{{-4}} \exp(-{b_opt:.3f}/t^2)$')
+         label=rf'Ajuste modelo: $I(t) = {C_opt:.2f} t^{{-4}} \exp(-{b_opt:.3f}/t^2)$')
 
 # Detalles estéticos
 plt.title('Espectro de Tiempo de Vuelo (TOF) para Átomos de Xe', fontsize=14)

@@ -1,7 +1,17 @@
-# FIS200 — Códigos y Cálculos
+# FIS200 — Física Experimental
 
-Este repositorio contiene los códigos desarrollados para el curso **FIS200**, organizados por experiencias.
-Cada experiencia incluye los scripts relevantes y una breve descripción del objetivo de cada uno.
+Códigos de análisis desarrollados para el curso **FIS200 (Física Experimental)**, organizados
+por experiencias. Cada experiencia incluye los scripts relevantes, su fundamento físico y una
+descripción del objetivo de cada uno.
+
+> ⚠️ **Sobre los datos:** varios scripts leen archivos de medición (`.txt`) tomados
+> directamente del instrumental del laboratorio. Esos archivos **no están incluidos** en el
+> repositorio, por lo que dichos scripts no se ejecutan tal cual. El código se publica como
+> referencia del método de análisis y del tratamiento de errores, no como un cálculo
+> reproducible de extremo a extremo.
+
+**Dependencias:** `numpy`, `pandas`, `matplotlib`, `scipy` (ver `requirements.txt` en la raíz
+del repositorio).
 
 ---
 
@@ -20,6 +30,7 @@ Los objetivos principales fueron:
 
 **Scripts Relevantes:**
 
+- [`parametros_resorte.py`](./Experiencias/Experiencia_1/parametros_resorte.py): Módulo base. Centraliza las mediciones, sus incertidumbres y el cálculo de $K$; los demás scripts de la experiencia lo importan en lugar de repetir valores.
 - [`calculo_k_y_error.py`](./Experiencias/Experiencia_1/calculo_k_y_error.py): Cálculo de $K$, su desviación estándar y propagación de errores.
 - [`trayectorias_0deg_promedio.py`](./Experiencias/Experiencia_1/trayectorias_0deg_promedio.py): Lectura de datos a 0°, normalización de coordenadas, graficación de trayectorias y tendencia promedio.
 - [`trayectorias_30deg_ajuste.py`](./Experiencias/Experiencia_1/trayectorias_30deg_ajuste.py): Procesamiento de datos a 30°, ajuste cuadrático promedio y comparación con la curva teórica.
@@ -55,7 +66,7 @@ $$
 ### 3. Experiencia 3 — Análisis del coeficiente de difusión
 
 En esta experiencia se estudió el movimiento aleatorio de una partícula utilizando datos experimentales de posición $x(t)$ y $y(t)$.
-A partir de estos datos se calculó el desplazamiento radial $r(t)$, el desplazamiento cuadrático medio $\langle r^2(t)\rangle$ y se obtuvo el coeficiente de difusión mediante un ajuste lineal.
+A partir de estos datos se calculó el desplazamiento radial $r(t)$ y se obtuvo el coeficiente de difusión mediante un ajuste lineal de $r^2(t)$ frente al tiempo.
 
 La relación fundamental utilizada fue:
 
@@ -63,17 +74,15 @@ $$
 r(t) = \sqrt{(x(t) - x_0)^2 + (y(t) - y_0)^2}
 $$
 
-Y el desplazamiento cuadrático medio:
+El coeficiente de difusión en dos dimensiones se obtuvo de la pendiente:
 
 $$
-\langle r^2(t)\rangle = \frac{1}{N} \sum_{i=1}^{N} r_i^2(t)
+D = \frac{1}{4} \frac{d}{dt}\, r^2(t)
 $$
 
-El coeficiente de difusión se obtuvo usando:
-
-$$
-D = \frac{1}{4} \frac{d}{dt}\langle r^2(t)\rangle
-$$
+> **Nota metodológica:** se dispone de una sola trayectoria, no de un conjunto de partículas.
+> Por eso no se construye un promedio de ensamble $\langle r^2(t)\rangle = \frac{1}{N}\sum_i r_i^2(t)$,
+> sino que $D$ se estima directamente de la pendiente del ajuste lineal sobre la trayectoria única.
 
 **Script Relevante:**
 
@@ -232,11 +241,11 @@ $$
 
 ### 7. Experiencia 7 — Dinámica de un sistema de masas acopladas
 
-Se estudió la relación entre la posición angular $\theta$ y la velocidad angular $\omega$ de dos masas acopladas, generando una animación de su evolución temporal.
+Se estudió la relación entre la posición angular $\theta$ y la velocidad angular $\omega$ de dos masas acopladas, generando una animación de su **retrato de fases** (trayectoria en el plano $\theta$–$\omega$) a medida que avanza el tiempo.
 
 **Script Relevante:**
 
-- [`grafico_dinamico_poincare.py`](./Experiencias/Experiencia_7/grafico_dinamico_poincare.py): Genera la animación que muestra la evolución temporal de ambas masas.
+- [`retrato_fases_masas_acopladas.py`](./Experiencias/Experiencia_7/retrato_fases_masas_acopladas.py): Genera la animación del retrato de fases de ambas masas.
 
 ---
 

@@ -21,21 +21,9 @@ data["r(t)"] = np.sqrt((data["x"] - x_0) ** 2 + (data["y"] - y_0) ** 2)
 # Calcular r^2(t)
 data["r^2(t)"] = data["r(t)"] ** 2
 
-# Calcular el desplazamiento cuadrático medio ⟨r^2(t)⟩
-mean_r2 = data["r^2(t)"].mean()
-
-# Calcular la desviación estándar de r^2(t)
-std_r2 = data["r^2(t)"].std()
-
-# Calcular el número de observaciones
-N = len(data["r^2(t)"])
-
-# Calcular el error estándar
-SE = std_r2 / np.sqrt(N)
-
-# Mostrar el desplazamiento cuadrático medio y el error estándar en formato decimal
-print(f"Desplazamiento cuadrático medio ⟨r^2(t)⟩: {mean_r2:.8f}")
-print(f"Error estándar de ⟨r^2(t)⟩: {SE:.8f}")
+# Nota: se dispone de una sola trayectoria, por lo que no es posible construir un
+# promedio de ensamble sobre partículas. El coeficiente de difusión se obtiene
+# directamente de la pendiente del ajuste lineal de r^2(t) frente a t.
 
 
 def linear_func(t, a, b):

@@ -223,8 +223,8 @@ periodos = np.diff(tiempo[picos])
 # Calcular el período promedio
 T_promedio = np.mean(periodos)
 
-# Calcular la desviación estándar del período
-T_desviacion = np.std(periodos)
+# Calcular la desviación estándar del período (muestral: N-1)
+T_desviacion = np.std(periodos, ddof=1)
 
 # Calcular la incertidumbre en omega_0
 delta_T = T_desviacion

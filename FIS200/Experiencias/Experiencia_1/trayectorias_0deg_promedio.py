@@ -21,7 +21,7 @@ todas_líneas_y = []
 for i, archivo in enumerate(archivos, start=1):
     try:
         # Leer datos con coma como separador decimal
-        datos = pd.read_csv(archivo, sep="\s+", engine="python", decimal=",")
+        datos = pd.read_csv(archivo, sep=r"\s+", engine="python", decimal=",")
 
         # Verificar datos cargados
         print(f"Primeras filas del archivo {archivo}:")

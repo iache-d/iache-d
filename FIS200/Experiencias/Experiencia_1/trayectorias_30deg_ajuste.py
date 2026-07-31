@@ -21,7 +21,7 @@ y_values = []
 
 for archivo, nombre in archivos:
 
-    df = pd.read_csv(archivo, sep="\s+")
+    df = pd.read_csv(archivo, sep=r"\s+")
 
     df["x"] = df["x"].str.replace(",", ".")
     df["y"] = df["y"].str.replace(",", ".")

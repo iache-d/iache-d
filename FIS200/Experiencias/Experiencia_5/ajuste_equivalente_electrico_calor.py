@@ -70,7 +70,7 @@ plt.plot(
     Q_agua,
     slope * Q_agua + intercept,
     color="red",
-    label=f"Ajuste lineal: $W_e = {slope:.2f} \, Q_{{agua}} + {intercept:.2f}$",
+    label=rf"Ajuste lineal: $W_e = {slope:.2f} \, Q_{{agua}} + {intercept:.2f}$",
 )
 residuals = W_e - (slope * Q_agua + intercept)
 std_dev = np.std(residuals)

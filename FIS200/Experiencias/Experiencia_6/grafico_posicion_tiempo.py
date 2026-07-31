@@ -25,14 +25,5 @@ plt.xlabel("(Tiempo ± 0.1) s")
 plt.ylabel("(Posición ± 0.0001) m")
 plt.legend()
 plt.grid(True)
-plt.savefig("XP7FIS200 L1.png", dpi=300)
-plt.show()
-
-# Mostrar la gráfica
-plt.grid(True)
-
-# Guardar la gráfica con 300 DPI
-plt.savefig('XP7FIS200 L1.png', dpi=300)
-
-# Mostrar la gráfica
+plt.savefig("XP7FIS200 L3.png", dpi=300)
 plt.show()

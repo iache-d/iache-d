@@ -70,13 +70,13 @@ for data in all_data:
     )
 
 velocidad_promedio = np.mean(velocidades_finales)
-error_velocidad = np.std(velocidades_finales)
+error_velocidad = np.std(velocidades_finales, ddof=1)  # muestral: N-1
 
 print(f"Velocidades finales promedio: {velocidad_promedio:.3f} m/s")
 print(f"Error: {error_velocidad:.3f} m/s")
 
 viscosidad_promedio = np.mean(viscosidades)
-error_viscosidad = np.std(viscosidades)
+error_viscosidad = np.std(viscosidades, ddof=1)  # muestral: N-1
 
 print(f"Viscosidad promedio: {viscosidad_promedio:.3f} Pa.s")
 print(f"Error: {error_viscosidad:.3f} Pa.s")

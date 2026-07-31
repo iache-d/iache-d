@@ -52,6 +52,6 @@ def update(frame):
 # Crear la animación
 ani = FuncAnimation(fig, update, frames=len(data1), interval=150, blit=True)
 
-ani.save("grafico_dinamico.gif", writer="pillow")
+ani.save("retrato_fases_masas_acopladas.gif", writer="pillow")
 
 plt.show()
