@@ -11,7 +11,7 @@ Cada certamen o tarea incluye los scripts relevantes y una breve descripción de
 
 Este script modela la dinámica de la altura (`h`) de un fluido en un depósito cilíndrico. El sistema está sujeto a múltiples flujos de entrada y salida, algunos constantes, otros variables con el tiempo y otros dependientes de la altura del fluido.
 
-El script principal se encuentra en: [`simulacion_deposito_fluido.py`](<./Tarea 1/simulacion_deposito_fluido.py>)
+El script principal se encuentra en: [`simulacion_deposito_fluido.py`](./Tarea_1/simulacion_deposito_fluido.py)
 
 **Lógica del Script:**
 1.  **Modelo Físico:** Define una Ecuación Diferencial Ordinaria (EDO) basada en la ley de continuidad para el depósito: $dh/dt = (Q_{\text{in}} - Q_{\text{out}}) / A_{\text{tanque}}$.
@@ -30,7 +30,7 @@ El script principal se encuentra en: [`simulacion_deposito_fluido.py`](<./Tarea 
 
 Este proyecto corresponde a la parte numérica del Certamen 1. El script de Python analiza un ciclo termodinámico de 5 etapas para un mol de un gas diatómico, comparando el comportamiento de un **Gas Ideal (IG)** con un **Gas de Van der Waals (VdW)**.
 
-El script principal se encuentra en: [`analisis_ciclo_termo.py`](./C1Numérico/analisis_ciclo_termo.py)
+El script principal se encuentra en: [`analisis_ciclo_termo.py`](./C1_Numerico/analisis_ciclo_termo.py)
 
 ### 🧠 Lógica del Script
 
@@ -67,7 +67,7 @@ El script requiere `numpy`, `matplotlib` y `scipy`.
     ```
 
 2.  **Ejecución:**
-    Simplemente ejecuta el script en una terminal desde la carpeta `C1Numérico`:
+    Simplemente ejecuta el script en una terminal desde la carpeta `C1_Numerico`:
     ```bash
     python analisis_ciclo_termo.py
     ```
@@ -104,10 +104,10 @@ El script principal se encuentra en: [`analisis_termometro_gas.py`](./Laboratori
 Estos scripts analizan los datos de un calorímetro eléctrico para determinar los calores latentes de fusión y vaporización del agua.
 
 **Parte 1: Calor Latente de Fusión ($L_f$)**
-* **Script:** [`analisis_calor_fusion.py`](./Laboratorios/analisis_calor_fusion.py)
+* **Script:** [`analisis_calor_fusion.py`](./Laboratorio/analisis_calor_fusion.py)
 * **Lógica:** Determina $L_f$ midiendo la energía eléctrica ($Q = V \cdot I \cdot t$) suministrada durante la meseta de fusión (0°C) para una masa de hielo conocida ($L_f = Q / m_{\text{hielo}}$).
 
 **Parte 2: Calor Latente de Vaporización ($L_v$)**
-* **Script:** [`analisis_calor_vaporizacion.py`](./Laboratorios/analisis_calor_vaporizacion.py)
+* **Script:** [`analisis_calor_vaporizacion.py`](./Laboratorio/analisis_calor_vaporizacion.py)
 * **Lógica:** Determina $L_v$ midiendo la energía suministrada durante la meseta de ebullición ($\Delta Q$) y dividiéndola por la masa de agua evaporada ($\Delta m_{\text{evap}}$) durante ese tiempo ($L_v = \Delta Q / \Delta m_{\text{evap}}$).
 ---

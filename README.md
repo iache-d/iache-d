@@ -58,7 +58,7 @@ especializarme prematuramente en un solo dominio.
 |---|---|---|
 | [**AF-MPD**](https://github.com/iache-d/AF-MPD) | Modelo de erosión iónica y blindaje magnético con bobinas HTS en propulsores magnetoplasmadinámicos. Investigación en curso. | 🔬 En desarrollo |
 | [**cecfa-web**](https://github.com/iache-d/cecfa-web) | Sitio web para el CECFA, asociación estudiantil de la que formo parte. | 🌐 Activo |
-| [**malla-interactiva-icf**](https://github.com/iache-d/malla-interactiva-icf) | Malla curricular interactiva de Ingeniería Civil Física. Descontinuada: existe hoy una herramienta institucional que cubre todas las carreras. | 📦 Archivado |
+| [**malla-interactiva-icf**](https://github.com/iache-d/malla-interactiva-icf) | Malla curricular interactiva de Ingeniería Civil Física. Descontinuada: otro estudiante desarrolló una herramienta más completa, que cubre todas las carreras y agrega más funciones. | 📦 Archivado |
 
 ---
 
@@ -151,7 +151,7 @@ prematurely in a single one.
 |---|---|---|
 | [**AF-MPD**](https://github.com/iache-d/AF-MPD) | Ion erosion model and HTS-coil magnetic shielding for magnetoplasmadynamic thrusters. Ongoing research. | 🔬 In progress |
 | [**cecfa-web**](https://github.com/iache-d/cecfa-web) | Website for CECFA, a student association I am part of. | 🌐 Active |
-| [**malla-interactiva-icf**](https://github.com/iache-d/malla-interactiva-icf) | Interactive curriculum map for Engineering Physics. Discontinued: an institutional tool now covers all programmes. | 📦 Archived |
+| [**malla-interactiva-icf**](https://github.com/iache-d/malla-interactiva-icf) | Interactive curriculum map for Engineering Physics. Discontinued: another student built a more complete tool covering every degree programme, with additional features. | 📦 Archived |
 
 ### 📚 Coursework
 

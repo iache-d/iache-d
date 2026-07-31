@@ -9,7 +9,7 @@ Cada tarea incluye los scripts relevantes y una breve descripción del objetivo 
 
 Este programa de consola, desarrollado en C++, calcula el número total de personas (asistentes y empleados) presentes en un evento en una hora específica, basándose en registros de entrada y salida de dos archivos fuente distintos.
 
-El script principal se encuentra en: [`gestor_asistencia.cpp`](<./Tarea 1/gestor_asistencia.cpp>)
+El script principal se encuentra en: [`gestor_asistencia.cpp`](./Tarea_1/gestor_asistencia.cpp)
 
 ### 🚀 Características
 
@@ -22,7 +22,7 @@ El script principal se encuentra en: [`gestor_asistencia.cpp`](<./Tarea 1/gestor
 
 ### 📂 Archivos Requeridos
 
-Para que el programa funcione, necesita dos archivos en el mismo directorio que el ejecutable (es decir, dentro de `Tarea 1` si compilas allí):
+Para que el programa funcione, necesita dos archivos en el mismo directorio que el ejecutable (es decir, dentro de `Tarea_1` si compilas allí):
 
 **1. `flujo-asistentes.dat` (Binario)**
 
@@ -54,11 +54,11 @@ Este archivo almacena el control de acceso de los empleados. Cada línea tiene e
 
 ### 🛠️ Compilación y Ejecución
 
-Para compilar y ejecutar, se recomienda estar dentro de la carpeta `Tarea 1`.
+Para compilar y ejecutar, se recomienda estar dentro de la carpeta `Tarea_1`.
 
 1.  **Navegar a la carpeta:**
     ```bash
-    cd "Tarea 1"
+    cd Tarea_1
     ```
 
 2.  **Compilar el programa:**

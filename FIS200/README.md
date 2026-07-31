@@ -21,9 +21,9 @@ Los objetivos principales fueron:
 **Scripts Relevantes:**
 
 - [`calculo_k_y_error.py`](./Experiencias/Experiencia_1/calculo_k_y_error.py): Cálculo de $K$, su desviación estándar y propagación de errores.
-- [`trayectoria_0_grados.py`](./Experiencias/Experiencia_1/trayectorias_0deg_promedio.py): Lectura de datos a 0°, normalización de coordenadas, graficación de trayectorias y tendencia promedio.
-- [`trayectoria_30_grados.py`](./Experiencias/Experiencia_1/trayectorias_30deg_ajuste.py): Procesamiento de datos a 30°, ajuste cuadrático promedio y comparación con la curva teórica.
-- [`promedio_y_desviacion.py`](./Experiencias/Experiencia_1/estadistica_distancias.py): Cálculo de promedios y desviaciones estándar para distancias medidas.
+- [`trayectorias_0deg_promedio.py`](./Experiencias/Experiencia_1/trayectorias_0deg_promedio.py): Lectura de datos a 0°, normalización de coordenadas, graficación de trayectorias y tendencia promedio.
+- [`trayectorias_30deg_ajuste.py`](./Experiencias/Experiencia_1/trayectorias_30deg_ajuste.py): Procesamiento de datos a 30°, ajuste cuadrático promedio y comparación con la curva teórica.
+- [`estadistica_distancias.py`](./Experiencias/Experiencia_1/estadistica_distancias.py): Cálculo de promedios y desviaciones estándar para distancias medidas.
 - [`distancias_teoricas_vs_experimentales.py`](./Experiencias/Experiencia_1/distancias_teoricas_vs_experimentales.py): Cálculo de distancias teóricas (15°, 30°, 45°) con propagación de errores y comparación experimental.
 
 ---
@@ -133,7 +133,7 @@ Se emplearon valores experimentales de $Q_{agua}$ y $W_e$ para realizar un ajust
 
 **Script Relevante:**
 
-- [`ajuste_equivalente_electrico_calor.py`](./Experiencias/Experiencia_5/ajuste_equivalente_electrico_calor.py.py): Realiza el ajuste lineal, obtiene la pendiente $a$, su error estándar, $R^2$ y genera el gráfico final.
+- [`ajuste_equivalente_electrico_calor.py`](./Experiencias/Experiencia_5/ajuste_equivalente_electrico_calor.py): Realiza el ajuste lineal, obtiene la pendiente $a$, su error estándar, $R^2$ y genera el gráfico final.
 
 ---
 
@@ -236,7 +236,7 @@ Se estudió la relación entre la posición angular $\theta$ y la velocidad angu
 
 **Script Relevante:**
 
-- [`animacion_masas_acopladas.py`](./Experiencias/Experiencia_7/grafico_dinamico_poincare.py): Genera la animación que muestra la evolución temporal de ambas masas.
+- [`grafico_dinamico_poincare.py`](./Experiencias/Experiencia_7/grafico_dinamico_poincare.py): Genera la animación que muestra la evolución temporal de ambas masas.
 
 ---
 
