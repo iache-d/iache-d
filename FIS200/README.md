@@ -80,7 +80,7 @@ $$
 El coeficiente de difusión en dos dimensiones se obtuvo de la pendiente:
 
 $$
-D = \frac{1}{4} \frac{d}{dt}\, r^2(t)
+D = \frac{1}{4} \frac{d}{dt} r^2(t)
 $$
 
 > **Nota metodológica:** se dispone de una sola trayectoria, no de un conjunto de partículas.
@@ -134,7 +134,7 @@ W_e = V I t
 $$
 
 $$
-Q_{agua} = (m_{agua} c_{agua} + m_{cal} c_{cal})\, \Delta T
+Q_{agua} = (m_{agua} c_{agua} + m_{cal} c_{cal}) \Delta T
 $$
 
 **Script Relevante:**
@@ -208,7 +208,7 @@ $$
 Se empleó la expresión:
 
 $$
-K = m \, \omega_0^2
+K = m \omega_0^2
 $$
 
 Con propagación de errores:

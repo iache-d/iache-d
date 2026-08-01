@@ -24,7 +24,7 @@ simulación clásica de sistemas cuánticos de muchos cuerpos.
 **Hamiltoniano implementado:**
 
 $$
-H = B\sum_{i=1}^{N}\sigma^z_i + J\sum_{i=1}^{N-1}\sigma^x_i\,\sigma^x_{i+1}
+H = B\sum_{i=1}^{N}\sigma^z_i + J\sum_{i=1}^{N-1}\sigma^x_i \sigma^x_{i+1}
 $$
 
 Se construye por productos tensoriales sucesivos (`np.kron`) de las matrices de Pauli sobre los
@@ -60,7 +60,7 @@ FFT.
 **Señal analizada:** dos armónicos superpuestos, muestreados a $f_s = 1000$ Hz durante 1 s:
 
 $$
-x(t) = \sin(2\pi \cdot 50\,t) + 0.5\,\sin(2\pi \cdot 120\,t)
+x(t) = \sin(2\pi \cdot 50 t) + 0.5 \sin(2\pi \cdot 120 t)
 $$
 
 **Contenido:**
@@ -93,7 +93,7 @@ propiedades termodinámicas a partir del movimiento microscópico.
 explícito y condiciones de frontera reflectantes:
 
 $$
-\vec{r}_i(t + \Delta t) = \vec{r}_i(t) + \vec{v}_i(t)\,\Delta t
+\vec{r}_i(t + \Delta t) = \vec{r}_i(t) + \vec{v}_i(t) \Delta t
 $$
 
 **Propiedades calculadas:**
@@ -126,7 +126,7 @@ $x(t)$ con ruido, inferir $(\gamma, k)$.
 **Sistema directo:**
 
 $$
-\ddot{x}(t) + \gamma\,\dot{x}(t) + k\,x(t) = 0,\qquad x(0)=1,\;\dot{x}(0)=0
+\ddot{x}(t) + \gamma \dot{x}(t) + k x(t) = 0, \qquad x(0)=1, \quad \dot{x}(0)=0
 $$
 
 cuya solución subamortiguada es
@@ -138,15 +138,15 @@ con $\omega_d = \sqrt{k - \gamma^2/4}$.
 - **(a)** Discusión del problema directo (bien planteado) frente al inverso, y de por qué este
   último no admite una inversión analítica directa.
 - **(b)** Generación del conjunto de datos: 3000 señales de 1000 puntos en $t\in[0,10]$,
-  integrando la EDO con `scipy.integrate.solve_ivp`, con $\gamma\sim\mathcal{U}(0.05,\,1.0)$,
-  $k\sim\mathcal{U}(1.0,\,5.0)$ y ruido gaussiano $\sigma = 0.02$. Se ilustra por separado el
+  integrando la EDO con `scipy.integrate.solve_ivp`, con $\gamma\sim\mathcal{U}(0.05, 1.0)$,
+  $k\sim\mathcal{U}(1.0, 5.0)$ y ruido gaussiano $\sigma = 0.02$. Se ilustra por separado el
   efecto de $k$ sobre la frecuencia y de $\gamma$ sobre el decaimiento.
 - **(c)** Entrenamiento de dos regresores multi-salida: **Random Forest** (200 árboles) y
   **perceptrón multicapa** (capas ocultas de 128 y 64 neuronas). En el MLP se estandarizan
   entradas *y* salidas, para que $k$ —de mayor magnitud— no domine la función de pérdida y la
   red no descuide $\gamma$. Evaluación mediante RMSE por parámetro y gráficos de predicho vs real.
 - **(d)** Estudio de la degradación del desempeño frente al ruido, con
-  $\sigma \in \{0,\,0.01,\,0.02,\,0.05,\,0.10\}$, comparando error de entrenamiento y de
+  $\sigma \in \lbrace 0, 0.01, 0.02, 0.05, 0.10 \rbrace$, comparando error de entrenamiento y de
   validación para detectar sobreajuste.
 
 **Resultado central:** el error crece monótonamente con el ruido, y $\gamma$ resulta más fácil
@@ -186,7 +186,7 @@ $$
   construcción de la curva de dosis en profundidad $D(z)$. El pico resulta en
   $z \approx 15.79$ cm frente a $R_\text{CSDA} \approx 15.76$ cm, dentro de la resolución del bin.
 - **(d)** Incorporación del *straggling* energético mediante la varianza de Bohr
-  $\sigma_E^2 = K\,m_ec^2\,\rho\,(Z/A)\,(z^2/\beta^2)\,\Delta x$, y análisis del ensanchamiento
+  $\sigma_E^2 = K m_e c^2 \rho (Z/A)(z^2/\beta^2) \Delta x$, y análisis del ensanchamiento
   del pico.
 
 > **Nota de implementación (inciso d).** A alta energía $\sigma_E$ es comparable a

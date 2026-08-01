@@ -23,7 +23,7 @@ modo que las reflexiones parciales de cada intercara se sumen en fase.
 El índice de refracción complejo se escribe en la convención habitual para rayos X blandos:
 
 $$
-n(\lambda) = 1 - \delta(\lambda) - i\,\beta(\lambda)
+n(\lambda) = 1 - \delta(\lambda) - i\beta(\lambda)
 $$
 
 donde $\delta$ y $\beta$ se obtuvieron de las tablas del **CXRO** (Center for X-Ray Optics) e
@@ -38,14 +38,14 @@ normal:
 $$
 M = \begin{pmatrix}
 \cos(\varphi) & \dfrac{i}{n}\sin(\varphi) \\
-i\,n\sin(\varphi) & \cos(\varphi)
+i n \sin(\varphi) & \cos(\varphi)
 \end{pmatrix},
 \qquad
 \varphi = \frac{2\pi n d}{\lambda}
 $$
 
-La matriz de una bicapa es $M_{\text{bicapa}} = M_{\text{Mo}}\,M_{\text{Si}}$, y la del
-apilamiento completo de $N$ bicapas es $M_{\text{bicapa}}^{\,N}$, calculada con
+La matriz de una bicapa es $M_{\text{bicapa}} = M_{\text{Mo}} M_{\text{Si}}$, y la del
+apilamiento completo de $N$ bicapas es $M_{\text{bicapa}}^{N}$, calculada con
 `numpy.linalg.matrix_power`. De sus elementos se obtiene el coeficiente de reflexión:
 
 $$
