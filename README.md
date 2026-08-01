@@ -80,7 +80,7 @@ servido como referencia.
 | [**FIS223**](./FIS223) | Óptica Moderna y Espectroscopía | Reflectancia de un espejo multicapa Mo/Si para EUV (13.5 nm) mediante matrices de transferencia, con datos ópticos del CXRO y estudio de saturación con el número de bicapas. |
 | [**FIS230**](./FIS230) | Termodinámica y Mecánica Estadística | Modelado estadístico de intervalos entre microsismos (Gamma vs exponencial), ajuste granulométrico de Weibull, energía media de un sistema de tres niveles con temperaturas negativas, y espectro de tiempo de vuelo de xenón. |
 | [**ICF130**](./ICF130) | Fundamentos de la Termodinámica | Análisis de experiencias de laboratorio (calor de fusión y vaporización, termómetro de gas), tareas con análisis numérico y ciclos termodinámicos. |
-| [**ICF140**](./ICF140) | Mecánica de Fluidos | Proyecto numérico del curso, desarrollado por fases. |
+| [**ICF140**](./ICF140) | Mecánica de Fluidos | Proyecto en tres fases sobre la inestabilidad de Rayleigh–Taylor en medios porosos, aplicada a la disolución de CO₂ en acuíferos: adimensionalización, formulación corriente–vorticidad, método híbrido espectral con diferencias compactas de alto orden, y ley de escalamiento del tiempo crítico validada contra la literatura. |
 | [**INF230**](./INF230) | Programación Avanzada para las Ciencias | Tareas de programación en C++. |
 
 </details>
@@ -165,7 +165,7 @@ physical context and equations. Links are in the collapsible section above.
 | [**FIS223**](./FIS223) | Modern Optics and Spectroscopy | Reflectance of a Mo/Si multilayer EUV mirror (13.5 nm) via the transfer-matrix method, using CXRO optical data, with a saturation study versus the number of bilayers. |
 | [**FIS230**](./FIS230) | Thermodynamics and Statistical Mechanics | Statistical modelling of microseismic waiting times (Gamma vs exponential), Weibull grain-size fitting, mean energy of a three-level system with negative temperatures, and a xenon time-of-flight spectrum. |
 | [**ICF130**](./ICF130) | Fundamentals of Thermodynamics | Laboratory data analysis (heat of fusion and vaporisation, gas thermometer), assignments with numerical analysis and thermodynamic cycles. |
-| [**ICF140**](./ICF140) | Fluid Mechanics | Course numerical project, developed in phases. |
+| [**ICF140**](./ICF140) | Fluid Mechanics | Three-phase project on the Rayleigh–Taylor instability in porous media, applied to CO₂ dissolution in saline aquifers: non-dimensionalisation, streamfunction–vorticity formulation, hybrid spectral method with high-order compact finite differences, and a critical-time scaling law validated against the literature. |
 | [**INF230**](./INF230) | Advanced Programming for the Sciences | C++ programming assignments. |
 
 ### 📬 Contact
