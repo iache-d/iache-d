@@ -18,7 +18,10 @@ A_B = np.pi * R_B**2  # m^2
 # Tubería C
 Q_C = 0.0008  # m^3/s
 
-# Tubería D (Asumiendo D_D = D_A = 38 cm)
+# Tubería D
+# El diámetro empleado es 0.30 m. Conviene contrastarlo con el enunciado original antes de
+# reutilizar estos resultados: el área de salida escala como D^2, de modo que un cambio de
+# diámetro modifica directamente el caudal evacuado y toda la curva h(t).
 D_D = 0.30  # m
 R_D = D_D / 2
 A_D = np.pi * R_D**2  # m^2
@@ -87,6 +90,8 @@ if sol.success:
     plt.ylabel("Altura h (m)")
     plt.grid(True)
     plt.legend()
+    plt.tight_layout()
+    plt.savefig("altura_deposito_vs_tiempo.png", dpi=300)
     plt.show()
 else:
     print("La simulación falló.")

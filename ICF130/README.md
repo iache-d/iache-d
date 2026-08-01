@@ -26,6 +26,8 @@ El script principal se encuentra en: [`simulacion_deposito_fluido.py`](./Tarea_1
 3.  **Solución Numérica:** Utiliza `scipy.integrate.solve_ivp` con un método Runge-Kutta (RK45) para resolver la EDO y encontrar la función $h(t)$ para un estado inicial $h_0 = 0.5$ m.
 4.  **Visualización:** Genera un gráfico de $h(t)$ vs. Tiempo, mostrando la evolución de la altura del fluido.
 
+![Evolución de la altura del fluido en el depósito](./Tarea_1/altura_deposito_vs_tiempo.png)
+
 
 
 ---
@@ -58,6 +60,30 @@ El análisis se realiza en cuatro etapas principales:
 **4. Visualización Comparativa**
 * Utiliza `matplotlib` para generar gráficos P-V y T-V.
 * Superpone las curvas del ciclo para el Gas Ideal y el Gas de Van der Waals, permitiendo una comparación visual directa de las desviaciones del comportamiento ideal.
+
+![Ciclo termodinámico en el plano P-V para ambos modelos de gas](./C1_Numerico/ciclo_PV_comparacion.png)
+
+![Ciclo termodinámico en el plano T-V para ambos modelos de gas](./C1_Numerico/ciclo_TV_comparacion.png)
+
+**Resultados:**
+
+| Modelo | $W_{neto}$ [bar·L] | $Q_{neto}$ [bar·L] | Eficiencia |
+|---|---|---|---|
+| Gas ideal | 13.0119 | 13.0119 | $\eta = 0.1628$ |
+| Van der Waals | 13.0745 | 13.0533 | $\eta = 0.1637$ |
+
+**Dos verificaciones que ofrece la tabla.** Para un ciclo cerrado el primer principio exige
+$W_{neto} = Q_{neto}$, ya que $\Delta U = 0$ al volver al estado inicial. El gas ideal lo cumple
+de forma exacta porque sus etapas se resuelven analíticamente; Van der Waals difiere en un
+0.16%, que corresponde al error de la integración numérica de $\int P dV$ en las etapas no
+isocóricas. Ese residuo es, en la práctica, un indicador de la precisión del método.
+
+> **Sobre el ajuste de los parámetros de Van der Waals.** El ajuste alcanza $R^2 = 0.9991$, pero
+> los intervalos de confianza al 95% resultan $a = 0.773 \pm 4.357$ y $b = 0.0153 \pm 0.1613$:
+> las incertidumbres superan a los valores en un factor de 6 y 10 respectivamente. Es el
+> síntoma clásico de una fuerte correlación entre ambos parámetros — los datos determinan bien
+> la *curva*, pero no cada parámetro por separado. Un $R^2$ alto no garantiza parámetros bien
+> determinados.
 
 ---
 
@@ -103,6 +129,21 @@ El script principal se encuentra en: [`analisis_termometro_gas.py`](./Laboratori
 3.  **Comparación (Ley de Gay-Lussac):** Calcula la presión teórica (`P_ideal`) que el gas debería tener en cada temperatura si siguiera la ley de gas ideal ($P \propto T$).
 4.  **Visualización:** Genera 3 gráficos comparativos, incluyendo `R vs T` (calibración) y `P_medida vs P_ideal` (verificación de la ley).
 
+**Resultados de la calibración del PT100:**
+
+| Magnitud | Valor |
+|---|---|
+| Resistencia a 0 °C | $R_0 = 100.22 \pm 0.16\ \Omega$ |
+| Coeficiente térmico | $\alpha = 0.00369 \pm 0.00003$ °C⁻¹ |
+| Calidad del ajuste | $R^2 = 0.9995$ |
+
+El valor de $R_0$ coincide con el nominal de un PT100 (100 Ω) dentro de la incertidumbre, y
+$\alpha$ queda a un 4% del valor estándar de 0.00385 °C⁻¹.
+
+![Resistencia del PT100 en función de la temperatura, con su ajuste lineal](./Laboratorio/resistencia_vs_temperatura.png)
+
+![Presión del bulbo comparada con la predicción de gas ideal](./Laboratorio/presion_vs_temperatura.png)
+
 ### Laboratorio 2: Calores Latentes de Fusión y Vaporización
 
 Estos scripts analizan los datos de un calorímetro eléctrico para determinar los calores latentes de fusión y vaporización del agua.
@@ -114,6 +155,27 @@ Estos scripts analizan los datos de un calorímetro eléctrico para determinar l
 **Parte 2: Calor Latente de Vaporización ($L_v$)**
 * **Script:** [`analisis_calor_vaporizacion.py`](./Laboratorio/analisis_calor_vaporizacion.py)
 * **Lógica:** Determina $L_v$ midiendo la energía suministrada durante la meseta de ebullición ($\Delta Q$) y dividiéndola por la masa de agua evaporada ($\Delta m_{\text{evap}}$) durante ese tiempo ($L_v = \Delta Q / \Delta m_{\text{evap}}$).
+
+![Curva de temperatura frente al calor acumulado durante la fusión del hielo](./Laboratorio/curva_TQ_fusion.png)
+
+**Resultados y limitaciones de estas dos experiencias:**
+
+| | Resultado | Valor tabulado | Diferencia |
+|---|---|---|---|
+| Fusión | $L_f = 257.5 \pm 1.5$ kJ/kg | 334 kJ/kg | 22.9% |
+| Vaporización | *no calculable* | 2256 kJ/kg | — |
+
+**Fusión.** La serie registrada permanece entre 1.1 y 1.7 °C durante los once minutos, de modo
+que no se distingue una meseta de fusión separada del calentamiento posterior del agua. Al
+atribuir toda la energía suministrada al cambio de fase, $L_f$ resulta subestimado. La
+diferencia del 23% respecto del valor tabulado es consecuencia de esa limitación experimental,
+no del análisis.
+
+**Vaporización.** El calor entregado durante la meseta ($\Delta Q = 8696$ J) sí quedó medido,
+pero **la masa de agua evaporada no se registró**, y sin ella $L_v = \Delta Q/\Delta m$ no puede
+obtenerse. El script reporta el $\Delta Q$ medido y deja el cálculo pendiente en lugar de
+completarlo con un valor supuesto. Como referencia, el valor tabulado implicaría una masa
+evaporada de aproximadamente 3.9 g.
 
 ---
 

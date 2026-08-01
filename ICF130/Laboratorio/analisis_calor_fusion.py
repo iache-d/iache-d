@@ -21,11 +21,12 @@ m_hielo = 50.4 / 1000  # kg
 # --- Convertimos tiempo a segundos ---
 tiempo_s = tiempo_min * 60
 
-# --- Selección de la fase de fusión ---
-indices_fusion = np.where((temperatura >= 0) & (temperatura <= 2))[0]
-
-if len(indices_fusion) < 2:
-    indices_fusion = np.arange(0, 2)
+# --- Fase considerada para la fusión ---
+# Toda la serie registrada permanece entre 1.1 y 1.7 C, de modo que no se distingue una
+# meseta de fusión separada de la fase de calentamiento posterior: se usan los 12 puntos.
+# Esto sobreestima la energía atribuida al cambio de fase y explica que el L_f resultante
+# quede por debajo del valor tabulado de 334 kJ/kg.
+indices_fusion = np.arange(len(temperatura))
 
 # --- Calor acumulado Q(t) solo durante la meseta ---
 delta_Q_fusion = 0
@@ -47,13 +48,16 @@ dQ = np.sqrt(sum( ((delta_V * I * (tiempo_s[indices_fusion[i]] - tiempo_s[indice
 dm = 0.1 / 1000  # error en masa
 dL_f = L_f * np.sqrt((dQ/delta_Q_fusion)**2 + (dm/m_hielo)**2)
 
+L_f_teo = 334e3  # J/kg, valor tabulado para el agua
 print(f"Calor latente de fusión estimado: L_f = {L_f:.1f} J/kg ± {dL_f:.1f} J/kg")
+print(f"Valor tabulado: {L_f_teo:.1f} J/kg   ->   error relativo: "
+      f"{abs(L_f_teo - L_f)/L_f_teo*100:.1f} %")
 
 # --- Gráfico T(Q) ---
 Q_total = np.zeros(len(tiempo_s))
 for i in range(1, len(tiempo_s)):
     dt = tiempo_s[i] - tiempo_s[i-1]
-    Q_total[i] = Q_total[i-1] + (voltaje[i] + voltaje[i-1])/2 * I
+    Q_total[i] = Q_total[i-1] + (voltaje[i] + voltaje[i-1])/2 * I * dt
 
 plt.errorbar(Q_total, temperatura, xerr=0, yerr=delta_T, fmt='o', capsize=5, label='Datos experimentales')
 plt.xlabel('Calor acumulado Q (J)')
@@ -61,4 +65,6 @@ plt.ylabel('Temperatura (°C)')
 plt.title('Curva T(Q) durante la fusión del hielo')
 plt.grid(True)
 plt.legend()
+plt.tight_layout()
+plt.savefig('curva_TQ_fusion.png', dpi=300)
 plt.show()

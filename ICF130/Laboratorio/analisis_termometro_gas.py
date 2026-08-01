@@ -59,20 +59,22 @@ P_ideal = P0 * T_K / T0  # Pa
 plt.figure(figsize=(6,4))
 plt.errorbar(T_real, R_pt100, yerr=dR, xerr=dT_real, fmt='o', label='Datos experimentales')
 plt.plot(T_real, intercept + slope*T_real, 'r-', label=f'Ajuste lineal')
-plt.xlabel('(Temperatura ± 0.5) °C')
+plt.xlabel('(Temperatura ± 1) °C')
 plt.ylabel('(Resistencia PT100 ± 0.1) Ω')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+plt.savefig('resistencia_vs_temperatura.png', dpi=300)
 plt.show()
 
 # 2) Altura mercurio vs Temperatura
 plt.figure(figsize=(6,4))
 plt.errorbar(T_real, h_mercurio, yerr=dh, xerr=dT_real, fmt='o')
-plt.xlabel('(Temperatura ± 0.5) °C')
+plt.xlabel('(Temperatura ± 1) °C')
 plt.ylabel('(Altura del mercurio ± 0.05) cm')
 plt.grid(True)
 plt.tight_layout()
+plt.savefig('altura_mercurio_vs_temperatura.png', dpi=300)
 plt.show()
 
 # 3) Presión del bulbo vs Temperatura y gas ideal
@@ -84,6 +86,7 @@ plt.ylabel('Presión (kPa)')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+plt.savefig('presion_vs_temperatura.png', dpi=300)
 plt.show()
 
 

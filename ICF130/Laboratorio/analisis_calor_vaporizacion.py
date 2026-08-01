@@ -22,8 +22,12 @@ delta_I = 0.01  # A
 m_total = 200.6 / 1000  # kg (masa total del sistema si hace falta)
 # Si mediste masa antes y después del intervalo de ebullición, introduce dm_evap en kg:
 # ej: dm_evap = (m_before - m_after)
-dm_evap = 0.0015      # <-- reemplaza por valor en kg si lo tienes, por ejemplo: 0.010 (10 g)
-dm_evap_unc = 0.0001  # incertidumbre en dm_evap (kg), ajustar si tienes medición real
+# La masa de agua evaporada durante la meseta NO quedo registrada en el laboratorio.
+# Sin ese dato, L_v no puede calcularse: el script reporta unicamente lo que si se midio
+# (el calor entregado durante la meseta) y deja el calculo de L_v pendiente.
+# Para completarlo, asignar aqui la masa evaporada en kg y su incertidumbre.
+dm_evap = None
+dm_evap_unc = None
 
 # --- Convertir tiempo ---
 tiempo_s = tiempo_min * 60
@@ -54,15 +58,17 @@ start_idx, end_idx = block[0], block[-1]
 delta_Q_vap = Q_total[end_idx] - Q_total[start_idx]
 
 # --- Obtener/estimar dm_evap ---
+L_v_teo = 2.256e6  # J/kg, valor tabulado del agua a 100 °C
+
+print(f"Meseta detectada entre índices {start_idx} y {end_idx} "
+      f"(t = {tiempo_min[start_idx]}-{tiempo_min[end_idx]} min).")
+print(f"ΔQ durante la meseta = {delta_Q_vap:.1f} J")
+
 if dm_evap is None:
-    # Si no hay medición de masa evaporada, ESTIMAMOS dm_evap usando una aproximación (NO IDEAL)
-    # Aquí dejamos dm_evap como None para forzar al usuario a ingresar la medición real.
-    print("ATENCIÓN: no se ha proporcionado dm_evap (masa evaporada).")
-    print("Para calcular L_v correctamente, introduzca dm_evap (kg) medido experimentalmente.")
-    # como fallback opcional (no recomendado), comentar si no se desea:
-    # dm_evap = 0.01  # por ejemplo 10 g estimados (solo si aceptas la estimación)
-    # dm_evap_unc = 0.005  # incertidumbre estimada (muy grande)
-    # Si no hay dm_evap, el cálculo de L_v real no se puede completar físicamente.
+    print()
+    print("No se dispone de la masa de agua evaporada, de modo que L_v no puede calcularse.")
+    print("Diagnostico: con el ΔQ medido, el valor tabulado L_v = 2.256e6 J/kg")
+    print(f"corresponderia a una masa evaporada de {delta_Q_vap / L_v_teo * 1000:.1f} g.")
 else:
     # --- Calor latente de vaporización ---
     L_v = delta_Q_vap / dm_evap  # J/kg
@@ -83,17 +89,12 @@ else:
     dL_v = abs(L_v) * np.sqrt( (dQ / delta_Q_vap)**2 + (dm_unc / dm)**2 )
 
     # imprimir resultados
-    print(f"Meseta detectada entre índices {start_idx} y {end_idx} (t = {tiempo_min[start_idx]}-{tiempo_min[end_idx]} min).")
-    print(f"ΔQ_evb = {delta_Q_vap:.1f} J  (ΔQ calculado como Q[end]-Q[start])")
     print(f"Δm_evap = {dm_evap:.4f} kg  (incertidumbre {dm_unc:.4f} kg)")
     print(f"Calor latente de vaporización estimado: L_v = {L_v:.1f} J/kg ± {dL_v:.1f} J/kg")
 
-    # comparación con valor teórico
-    L_v_teo = 2.256e6  # J/kg (aprox. a 100 °C)
-    err_comp = L_v_teo - L_v
-    err_rel = abs(err_comp) / L_v_teo * 100
-    print(f"Error comparativo (abs): {err_comp:.1f} J/kg")
-    print(f"Error relativo: {err_rel:.2f} %")
+    # comparación con el valor tabulado
+    err_rel = abs(L_v_teo - L_v) / L_v_teo * 100
+    print(f"Valor tabulado: {L_v_teo:.1f} J/kg   ->   error relativo: {err_rel:.2f} %")
 
 # --- Gráfica T(Q) y marca de la meseta ---
 plt.figure(figsize=(7,4.5))
@@ -107,5 +108,6 @@ plt.title('Curva T(Q) - calentamiento y meseta de ebullición')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+plt.savefig('curva_TQ_vaporizacion.png', dpi=300)
 plt.show()
 

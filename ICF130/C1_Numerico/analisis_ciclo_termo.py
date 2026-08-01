@@ -389,6 +389,8 @@ plt.ylabel("P [bar]")
 plt.title("Ciclo P-V: Gas Ideal vs Van der Waals")
 plt.legend()
 plt.grid(True)
+plt.tight_layout()
+plt.savefig("ciclo_PV_comparacion.png", dpi=300)
 plt.show()
 
 # Graficar T-V 
@@ -402,7 +404,12 @@ plt.ylabel("T [K]")
 plt.title("Ciclo T-V: Gas Ideal vs Van der Waals")
 plt.legend()
 plt.grid(True)
+plt.tight_layout()
+plt.savefig("ciclo_TV_comparacion.png", dpi=300)
 plt.show()
+
+# Nota: los cuatro graficos siguientes muestran por separado lo que estos dos ya
+# presentan superpuesto. Se conservan para inspeccion interactiva, pero no se guardan.
 
 
 # IG
