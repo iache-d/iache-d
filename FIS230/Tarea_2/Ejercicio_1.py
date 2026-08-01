@@ -5,10 +5,13 @@ import matplotlib.pyplot as plt
 # De -5 a 5 alcanza de sobra para ver las asíntotas
 b_eps = np.linspace(-5, 5, 500)
 
-# 2. Energía esperada <E>/eps 
+# 2. Energía esperada <E>/eps
+# Sistema de tres niveles no degenerados con energias {-2eps, 0, +2eps}:
+#   Z          = e^{2*beta*eps} + 1 + e^{-2*beta*eps} = 2*cosh(2*beta*eps) + 1
+#   dZ/dbeta   = 2 * (2*eps) * sinh(2*beta*eps)       = 4*eps*sinh(2*beta*eps)
+#   <E>        = -(1/Z) dZ/dbeta = -4*eps*sinh(2*beta*eps) / (2*cosh(2*beta*eps) + 1)
 # Usamos senos y cosenos hiperbólicos porque escribir exponenciales a mano da pereza y es propenso a errores
-# Metí el 2 multiplicando directo al otro 2 para ahorrar cálculos innecesarios
-e_promedio = -4 * np.sinh(b_eps) / (2 * np.cosh(b_eps) + 1)
+e_promedio = -4 * np.sinh(2 * b_eps) / (2 * np.cosh(2 * b_eps) + 1)
 
 # 3. pinturamosus
 plt.rcParams.update({'font.size': 14, 'font.family': 'sans-serif'})

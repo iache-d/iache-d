@@ -14,10 +14,20 @@ def modelo_TOF(t, C, b):
 parametros_optimos, covarianza = curve_fit(modelo_TOF, t_datos, senal_datos, p0=[20, 0.35])
 C_opt, b_opt = parametros_optimos
 
+# Incertidumbres de los parámetros: raíz de la diagonal de la matriz de covarianza
+sigma_C, sigma_b = np.sqrt(np.diag(covarianza))
+
+# Bondad de ajuste
+residuos = senal_datos - modelo_TOF(t_datos, C_opt, b_opt)
+ss_res = np.sum(residuos**2)
+ss_tot = np.sum((senal_datos - np.mean(senal_datos)) ** 2)
+r2 = 1 - ss_res / ss_tot
+
 
 print("=== RESULTADOS DEL AJUSTE ===")
-print(f"Parámetro óptimo C: {C_opt:.4f}")
-print(f"Parámetro óptimo b: {b_opt:.4f}")
+print(f"Parámetro óptimo C: {C_opt:.4f} ± {sigma_C:.4f}")
+print(f"Parámetro óptimo b: {b_opt:.4f} ± {sigma_b:.4f} ms²")
+print(f"Coeficiente de determinación R²: {r2:.4f}")
 print("=============================")
 
 
@@ -38,6 +48,9 @@ plt.xlabel('Tiempo de vuelo $t$ (ms)', fontsize=12)
 plt.ylabel('Señal Normalizada', fontsize=12)
 plt.grid(True, linestyle='--', alpha=0.6)
 plt.legend(fontsize=11)
+
+plt.tight_layout()
+plt.savefig('espectro_tof_xenon.png', dpi=300)
 
 # Mostrar el gráfico final
 plt.show()
