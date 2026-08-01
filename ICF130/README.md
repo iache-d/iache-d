@@ -1,7 +1,11 @@
-# ICF130 — Tareas y Proyectos
+# ICF130 — Fundamentos de la Termodinámica
 
-Este repositorio contiene las tareas y proyectos numéricos desarrollados para el curso **ICF130**.
-Cada certamen o tarea incluye los scripts relevantes y una breve descripción del objetivo de cada uno.
+Tareas, análisis de laboratorio y el proyecto de simulación desarrollados para el curso
+**ICF130 (Fundamentos de la Termodinámica)**. Cada sección incluye los scripts relevantes y una
+descripción de su objetivo.
+
+**Dependencias:** `numpy`, `scipy`, `matplotlib`, `pandas` (ver `requirements.txt` en la raíz
+del repositorio).
 
 ---
 
@@ -110,4 +114,81 @@ Estos scripts analizan los datos de un calorímetro eléctrico para determinar l
 **Parte 2: Calor Latente de Vaporización ($L_v$)**
 * **Script:** [`analisis_calor_vaporizacion.py`](./Laboratorio/analisis_calor_vaporizacion.py)
 * **Lógica:** Determina $L_v$ midiendo la energía suministrada durante la meseta de ebullición ($\Delta Q$) y dividiéndola por la masa de agua evaporada ($\Delta m_{\text{evap}}$) durante ese tiempo ($L_v = \Delta Q / \Delta m_{\text{evap}}$).
+
+---
+
+## 🔹 Trabajo de Simulación: conducción de calor transitoria en 2D
+
+📓 [`Trabajo_de_Simulacion/conduccion_calor_2d.ipynb`](./Trabajo_de_Simulacion/conduccion_calor_2d.ipynb)
+
+**Autores:** Ignacio Díaz · Flavia Pedraza
+
+Estudio de la evolución de la temperatura en una placa rectangular de acero, comparando la
+**solución analítica** por separación de variables con un **solver numérico** de diferencias
+finitas explícitas (FTCS), y evaluando el efecto de una fuente de calor interna.
+
+$$
+\frac{\partial T}{\partial t} = \alpha\left(\frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2}\right) + \frac{\dot{q}}{\rho c_p}, \qquad \alpha = \frac{k}{\rho c_p}
+$$
+
+![Esquema del dominio computacional con sus condiciones de borde](./Trabajo_de_Simulacion/esquema_fisico.png)
+
+### Solución analítica
+
+Los bordes horizontales son adiabáticos y la condición inicial es uniforme, de modo que el
+problema 2D **se reduce exactamente al problema 1D en $x$**. La solución se separa en el estado
+estacionario más una parte transitoria que decae:
+
+$$
+T(x,t) = T_{ss}(x) + \sum_{n=1}^{\infty} b_n \sin\left(\frac{n\pi x}{L_x}\right) e^{-\alpha (n\pi/L_x)^2 t}
+$$
+
+Como la condición inicial transitoria es una función lineal de $x$, los coeficientes $b_n$
+tienen **forma cerrada** y no requieren cuadratura numérica.
+
+### Efecto de la fuente interna
+
+Se resuelve el problema en dos escenarios —sin fuente (Caso A) y con
+$\dot{q} = 5\times10^5$ W/m³ (Caso B)— y se resta uno del otro para aislar el calentamiento
+atribuible únicamente a la fuente.
+
+![Diferencia de temperatura entre los casos con y sin fuente](./Trabajo_de_Simulacion/diferencia.png)
+
+El aumento máximo tras 60 s resulta de **8.3612 °C**, que coincide exactamente con la cota
+adiabática $\dot{q} t/(\rho c_p)$. La razón es que la diferencia entre ambos casos obedece la
+misma ecuación del calor con la fuente como único término y condiciones nulas en los bordes de
+Dirichlet: crece de forma puramente adiabática mientras la difusión no alcance el centro. En
+60 s el calor penetra apenas 2.7 cm desde los bordes, frente a los 25 cm que los separan del
+centro de la placa.
+
+### Verificación y convergencia
+
+| Magnitud | Valor |
+|---|---|
+| Malla base | 51 × 31 nodos, $\Delta x = \Delta y = 0.01$ m |
+| Paso temporal | $\Delta t = 1.794$ s |
+| Número de Fourier | $Fo = 0.45$ (límite de estabilidad: 0.5) |
+| Orden de convergencia observado | **1.940** (teórico: 2) |
+
+![Compromiso entre precisión y costo computacional al refinar la malla](./Trabajo_de_Simulacion/convergencia.png)
+
+La condición de estabilidad de von Neumann para el esquema explícito en dos dimensiones es
+
+$$
+\alpha \Delta t \left(\frac{1}{\Delta x^2} + \frac{1}{\Delta y^2}\right) \le \frac{1}{2}
+$$
+
+El límite es $1/2$ y no $1$: cada dirección aporta su propio término y el peor modo de Fourier
+los suma. Como $\Delta t$ estable escala con $\Delta x^2$, refinar el espacio encarece el
+cálculo rápidamente — ese es el compromiso que muestra la figura.
+
+### Análisis paramétricos
+
+Sensibilidad de la evolución transitoria a la difusividad térmica ($\pm 50\%$) y al valor de la
+fuente interna:
+
+![Impacto de la difusividad en la evolución transitoria](./Trabajo_de_Simulacion/parametrico_alpha.png)
+
+![Perfil de temperatura para distintas intensidades de la fuente](./Trabajo_de_Simulacion/parametrico_q0.png)
+
 ---
