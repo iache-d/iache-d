@@ -1,0 +1,66 @@
+@startuml
+
+' Interfaces
+interface IFigura2D {
+    +double GetArea()
+    +double GetPerimetro()
+}
+
+interface IFigura3D {
+    +double GetVolumen()
+    +double GetSuperficie()
+}
+
+interface IPoliedro {
+    +double GetTotalLongAristas()
+}
+
+' Clase abstracta base
+abstract class FiguraGeometrica {
+    -String nombre
+    -String tipo
+    +String GetNombre() // Cambiado a public por requerimiento
+    -String GetTipo()
+    #abstract void ResumenFigura()
+}
+
+' Subclases abstractas
+abstract class Figura2D
+abstract class Figura3D
+abstract class Poliedro
+
+' Relaciones de herencia y uso
+Figura2D --|> FiguraGeometrica
+Figura3D --|> FiguraGeometrica
+Poliedro --|> Figura3D
+
+Figura2D ..|> IFigura2D
+Figura3D ..|> IFigura3D
+Poliedro ..|> IPoliedro
+
+' Clases concretas 2D
+class Cuadrado
+class Rectangulo
+class Triangulo
+class Circulo
+
+Cuadrado --|> Figura2D
+Rectangulo --|> Figura2D
+Triangulo --|> Figura2D
+Circulo --|> Figura2D
+
+' Clases concretas 3D no poliedros
+class Esfera
+class Cilindro
+
+Esfera --|> Figura3D
+Cilindro --|> Figura3D
+
+' Clases concretas poliedros
+class Cubo
+class Tetraedro
+
+Cubo --|> Poliedro
+Tetraedro --|> Poliedro
+
+@enduml

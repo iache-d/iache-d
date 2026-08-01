@@ -1,0 +1,2 @@
+Ignacio Díaz Inzunza,202311533-9,200,parte 1 (polinomioLista)
+Flavia Pedraza Alarcón,202311508-8,200,parte 2(polinomioArbol)

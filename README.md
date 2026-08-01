@@ -81,7 +81,7 @@ servido como referencia.
 | [**FIS230**](./FIS230) | Termodinámica y Mecánica Estadística | Modelado estadístico de intervalos entre microsismos (Gamma vs exponencial), ajuste granulométrico de Weibull, energía media de un sistema de tres niveles con temperaturas negativas, y espectro de tiempo de vuelo de xenón. |
 | [**ICF130**](./ICF130) | Fundamentos de la Termodinámica | Proyecto de simulación de conducción de calor transitoria en 2D (solución analítica frente a diferencias finitas explícitas, con estudio de convergencia). Además: ciclos termodinámicos con gas de Van der Waals, análisis de experiencias de laboratorio y tareas numéricas. |
 | [**ICF140**](./ICF140) | Mecánica de Fluidos | Proyecto en tres fases sobre la inestabilidad de Rayleigh–Taylor en medios porosos, aplicada a la disolución de CO₂ en acuíferos: adimensionalización, formulación corriente–vorticidad, método híbrido espectral con diferencias compactas de alto orden, y ley de escalamiento del tiempo crítico validada contra la literatura. |
-| [**INF230**](./INF230) | Programación Avanzada para las Ciencias | Tareas de programación en C++. |
+| [**INF230**](./INF230) | Programación Avanzada para las Ciencias | Cuatro tareas en tres lenguajes: gestión de archivos binarios y de texto en C++, polinomios implementados con lista enlazada y con árbol binario de búsqueda, jerarquía de figuras geométricas con herencia e interfaces en Java, y programación funcional en Scheme. |
 
 </details>
 
@@ -166,7 +166,7 @@ physical context and equations. Links are in the collapsible section above.
 | [**FIS230**](./FIS230) | Thermodynamics and Statistical Mechanics | Statistical modelling of microseismic waiting times (Gamma vs exponential), Weibull grain-size fitting, mean energy of a three-level system with negative temperatures, and a xenon time-of-flight spectrum. |
 | [**ICF130**](./ICF130) | Fundamentals of Thermodynamics | Simulation project on 2D transient heat conduction (analytical solution vs explicit finite differences, with a convergence study). Also: thermodynamic cycles with a Van der Waals gas, laboratory data analysis and numerical assignments. |
 | [**ICF140**](./ICF140) | Fluid Mechanics | Three-phase project on the Rayleigh–Taylor instability in porous media, applied to CO₂ dissolution in saline aquifers: non-dimensionalisation, streamfunction–vorticity formulation, hybrid spectral method with high-order compact finite differences, and a critical-time scaling law validated against the literature. |
-| [**INF230**](./INF230) | Advanced Programming for the Sciences | C++ programming assignments. |
+| [**INF230**](./INF230) | Advanced Programming for the Sciences | Four assignments across three languages: binary and text file handling in C++, polynomials implemented with both a linked list and a binary search tree, a geometric-shape hierarchy with inheritance and interfaces in Java, and functional programming in Scheme. |
 
 ### 📬 Contact
 

@@ -1,0 +1,21 @@
+Pregunta 1: Agregar un "color" accesible directamente a todas las figuras
+
+El diseño implementado, basado en clases abstractas y herencia, facilita agregar propiedades comunes como el "color" gracias al principio de reutilización. 
+Como todas las figuras concretas heredan (directa o indirectamente) de la clase abstracta "FiguraGeometrica", podríamos simplemente agregar el atributo "String color;" en dicha clase base.
+
+Como el acceso debe ser directo, no sería necesario encapsularlo con gett's/sett's. Al definirlo en la clase padre, todas las figuras heredan automáticamente esa propiedad sin duplicar código. 
+
+
+---
+
+Pregunta 2: Incorporar "Triángulos Equiláteros" como una especialización
+
+Un triángulo equilátero es un caso específico del triángulo general, por lo tanto, se puede modelar como una subclase de la clase concreta `Triangulo`.
+
+Implementaría una clase `TrianguloEquilatero` que extienda `Triangulo`. Esta nueva clase solo recibiría un parámetro: la longitud de uno de sus lados. Internamente, llamaría al constructor de `Triangulo` pasando los tres lados iguales.
+
+Este enfoque está basado en los principios de:
+- **Herencia** (TriánguloEquilatero hereda de Triángulo)
+- **Especialización** (una clase hija restringe o refina el comportamiento de la clase padre)
+- **Reutilización de código** (no se repite la lógica del cálculo de área o perímetro)
+
