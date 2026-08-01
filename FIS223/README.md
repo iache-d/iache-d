@@ -37,8 +37,8 @@ normal:
 
 $$
 M = \begin{pmatrix}
-\cos\varphi & \dfrac{i}{n}\sin\varphi \\[2mm]
-i\,n\sin\varphi & \cos\varphi
+\cos(\varphi) & \dfrac{i}{n}\sin(\varphi) \\
+i\,n\sin(\varphi) & \cos(\varphi)
 \end{pmatrix},
 \qquad
 \varphi = \frac{2\pi n d}{\lambda}
@@ -49,9 +49,7 @@ apilamiento completo de $N$ bicapas es $M_{\text{bicapa}}^{\,N}$, calculada con
 `numpy.linalg.matrix_power`. De sus elementos se obtiene el coeficiente de reflexión:
 
 $$
-r = \frac{n_0(m_{11} + n_s m_{12}) - (m_{21} + n_s m_{22})}
-         {n_0(m_{11} + n_s m_{12}) + (m_{21} + n_s m_{22})},
-\qquad R = |r|^2
+r = \frac{n_0(m_{11} + n_s m_{12}) - (m_{21} + n_s m_{22})}{n_0(m_{11} + n_s m_{12}) + (m_{21} + n_s m_{22})}, \qquad R = |r|^2
 $$
 
 con $n_0 = 1$ (aire) y $n_s$ el índice del sustrato semi-infinito de silicio.
