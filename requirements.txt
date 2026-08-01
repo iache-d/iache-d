@@ -1,5 +1,12 @@
+# Base: analisis numerico, datos y graficos
 numpy
-pandas
-matplotlib
 scipy
+matplotlib
+pandas
 pillow
+
+# FIS205 - Fisica Computacional
+scikit-learn
+numba
+tqdm
+ipywidgets

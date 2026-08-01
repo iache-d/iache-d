@@ -76,7 +76,7 @@ servido como referencia.
 | Código | Asignatura | Contenido publicado |
 |---|---|---|
 | [**FIS200**](./FIS200) | Física Experimental | Análisis de datos de las siete experiencias de laboratorio: constante elástica, dinámica con roce, coeficiente de difusión, viscosidad por ley de Stokes, equivalente eléctrico del calor, oscilaciones amortiguadas y secciones de Poincaré. Con propagación de errores. |
-| [**FIS205**](./FIS205) | Física Computacional | Tareas de métodos computacionales resueltas en Jupyter Notebook. |
+| [**FIS205**](./FIS205) | Física Computacional | Modelo de Ising cuántico y escalamiento del espacio de Hilbert, DFT frente a FFT, dinámica molecular de un gas ideal, problemas inversos resueltos con aprendizaje automático, y transporte de protones en agua (Bethe–Bloch y pico de Bragg). |
 | [**FIS223**](./FIS223) | Óptica Moderna y Espectroscopía | Análisis de datos de reflectancia. |
 | [**FIS230**](./FIS230) | Termodinámica y Mecánica Estadística | Ejercicios con análisis numérico y de datos. |
 | [**ICF130**](./ICF130) | Fundamentos de la Termodinámica | Análisis de experiencias de laboratorio (calor de fusión y vaporización, termómetro de gas), tareas con análisis numérico y ciclos termodinámicos. |
@@ -161,7 +161,7 @@ physical context and equations. Links are in the collapsible section above.
 | Code | Course | Published content |
 |---|---|---|
 | [**FIS200**](./FIS200) | Experimental Physics | Data analysis for seven laboratory sessions: spring constant, motion with friction, diffusion coefficient, viscosity via Stokes' law, electrical equivalent of heat, damped oscillations and Poincaré sections. With error propagation. |
-| [**FIS205**](./FIS205) | Computational Physics | Computational-methods assignments solved in Jupyter Notebook. |
+| [**FIS205**](./FIS205) | Computational Physics | Quantum Ising model and Hilbert-space scaling, DFT vs FFT, molecular dynamics of an ideal gas, inverse problems solved with machine learning, and proton transport in water (Bethe–Bloch and the Bragg peak). |
 | [**FIS223**](./FIS223) | Modern Optics and Spectroscopy | Reflectance data analysis. |
 | [**FIS230**](./FIS230) | Thermodynamics and Statistical Mechanics | Exercises with numerical and data analysis. |
 | [**ICF130**](./ICF130) | Fundamentals of Thermodynamics | Laboratory data analysis (heat of fusion and vaporisation, gas thermometer), assignments with numerical analysis and thermodynamic cycles. |
