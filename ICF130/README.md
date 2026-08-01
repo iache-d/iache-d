@@ -117,6 +117,40 @@ Estos scripts analizan los datos de un calorímetro eléctrico para determinar l
 
 ---
 
+### Laboratorio 3: Rendimiento de una bomba de calor
+
+📓 [`Laboratorio_3/laboratorio_3_bomba_de_calor.ipynb`](./Laboratorio/Laboratorio_3/laboratorio_3_bomba_de_calor.ipynb)
+
+**Autores:** Ignacio Díaz · Flavia Pedraza
+
+Se mide el desempeño de un compresor que transfiere calor entre dos depósitos de agua: el foco
+frío se enfría de 22 a 10 °C y el foco caliente se calienta de 21 a 36 °C, mientras se registra
+la potencia eléctrica consumida.
+
+$$
+Q_2 = m c_p \Delta T_2, \qquad W_{elec} = P \Delta t, \qquad \eta_{co} = \frac{Q_2}{W_{elec}}
+$$
+
+![Evolución de las temperaturas de ambos focos con barras de incertidumbre](./Laboratorio/Laboratorio_3/temperaturas_vs_tiempo.png)
+
+![Rendimiento del compresor por intervalo, con su incertidumbre](./Laboratorio/Laboratorio_3/rendimiento_vs_tiempo.png)
+
+**Resultado:** $\eta_{co} = 1.82 \pm 0.17$ (9.4%).
+
+**Interpretación.** Que $\eta$ supere la unidad es lo esperado: no se trata de una eficiencia
+acotada por 1, sino de un **coeficiente de desempeño**. La máquina no crea energía, la
+transporta desde el foco frío al caliente. El límite de Carnot al final del ensayo es
+$T_2/(T_2-T_1) = 11.9$, muy por encima del valor medido, como corresponde a una máquina real
+con irreversibilidades.
+
+**Sobre las incertidumbres por intervalo.** El rendimiento global es mucho más confiable que los
+valores tramo a tramo: en cada minuto el foco caliente sube apenas 1 o 2 °C, comparable a la
+resolución del termómetro, de modo que el error relativo por intervalo llega al 70–140%. En
+cambio, el cálculo global usa el salto total de 15 °C y queda en 9.4%. Es un buen recordatorio
+de que promediar razones ruidosas no equivale a la razón de los totales.
+
+---
+
 ## 🔹 Trabajo de Simulación: conducción de calor transitoria en 2D
 
 📓 [`Trabajo_de_Simulacion/conduccion_calor_2d.ipynb`](./Trabajo_de_Simulacion/conduccion_calor_2d.ipynb)
