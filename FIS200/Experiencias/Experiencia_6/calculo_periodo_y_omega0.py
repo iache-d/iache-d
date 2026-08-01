@@ -213,8 +213,12 @@ posicion = np.array(
     ]
 )
 
-# Identificar los picos (máximos y mínimos) en los datos de la posición
-picos, _ = find_peaks(posicion)
+# Identificar los máximos de la oscilación.
+# Se exige una prominencia mínima porque la serie contiene una muestra perdida
+# (t = 0.9 s, valor exactamente 0) que convierte a su vecino en un máximo local
+# artificial de ~0.034 m, muy por debajo de los máximos reales (~0.07 m). Sin este
+# filtro ese pico espurio parte un período en dos y triplica la incertidumbre.
+picos, _ = find_peaks(posicion, prominence=0.05)
 
 # Calcular los períodos usando los tiempos de los picos
 # El período es la diferencia entre los tiempos de dos picos consecutivos
@@ -244,4 +248,5 @@ plt.ylabel("Posición (m)")
 plt.title("Posición vs Tiempo con Picos Identificados")
 plt.legend()
 plt.grid(True)
+plt.savefig("grafico_periodo_picos.png", dpi=300)
 plt.show()

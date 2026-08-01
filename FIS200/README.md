@@ -4,11 +4,12 @@ Códigos de análisis desarrollados para el curso **FIS200 (Física Experimental
 por experiencias. Cada experiencia incluye los scripts relevantes, su fundamento físico y una
 descripción del objetivo de cada uno.
 
-> ⚠️ **Sobre los datos:** varios scripts leen archivos de medición (`.txt`) tomados
-> directamente del instrumental del laboratorio. Esos archivos **no están incluidos** en el
-> repositorio, por lo que dichos scripts no se ejecutan tal cual. El código se publica como
-> referencia del método de análisis y del tratamiento de errores, no como un cálculo
-> reproducible de extremo a extremo.
+> ⚠️ **Sobre los datos:** las experiencias 2, 4 (ajuste exponencial), 5 y 6 tienen sus
+> mediciones incluidas dentro del propio código: se ejecutan tal cual y reproducen las figuras
+> que aparecen más abajo. Las experiencias 1, 3, 4 (viscosidad) y 7 leen archivos `.txt`
+> tomados directamente del instrumental del laboratorio, que **no están incluidos** en el
+> repositorio; esos scripts se publican como referencia del método de análisis y del
+> tratamiento de errores, no como un cálculo reproducible de extremo a extremo.
 
 **Dependencias:** `numpy`, `pandas`, `matplotlib`, `scipy` (ver `requirements.txt` en la raíz
 del repositorio).
@@ -61,6 +62,8 @@ $$
 
   Además, genera un gráfico comparativo entre los tres casos.
 
+![Velocidad en función del tiempo para los tres casos](./Experiencias/Experiencia_2/grafico_velocidades_promedio.png)
+
 ---
 
 ### 3. Experiencia 3 — Análisis del coeficiente de difusión
@@ -101,6 +104,8 @@ Se utilizó la función $v(t) = a e^{bt} + c$ para ajustar los datos de tres con
 **Script Relevante:**
 
 - [`ajuste_exponencial_esferas.py`](./Experiencias/Experiencia_4/ajuste_exponencial_esferas.py): Realiza el ajuste de cada conjunto de datos, genera curvas suavizadas y exporta un gráfico comparativo.
+
+![Ajuste exponencial de la velocidad para las tres esferas](./Experiencias/Experiencia_4/grafico_ajuste_exponencial.png)
 
 #### Determinación de la viscosidad
 
@@ -143,6 +148,10 @@ Se emplearon valores experimentales de $Q_{agua}$ y $W_e$ para realizar un ajust
 **Script Relevante:**
 
 - [`ajuste_equivalente_electrico_calor.py`](./Experiencias/Experiencia_5/ajuste_equivalente_electrico_calor.py): Realiza el ajuste lineal, obtiene la pendiente $a$, su error estándar, $R^2$ y genera el gráfico final.
+
+![Ajuste lineal entre trabajo eléctrico y calor absorbido](./Experiencias/Experiencia_5/grafico_trabajo_calor_parte2.png)
+
+Resultado: $a = 1.156 \pm 0.009$ J/J, con $R^2 = 0.9986$.
 
 ---
 
@@ -236,6 +245,16 @@ $$
 **Script:**
 
 - [`calculo_periodo_y_omega0.py`](./Experiencias/Experiencia_6/calculo_periodo_y_omega0.py): Calcula $T$, $\Delta T$, $\omega_0$ y $\Delta \omega_0$.
+
+![Posición en función del tiempo con los máximos identificados](./Experiencias/Experiencia_6/grafico_periodo_picos.png)
+
+Resultado: $T = 0.657 \pm 0.051$ s y $\omega_0 = 9.56 \pm 0.75$ rad/s.
+
+> **Nota sobre la detección de picos:** la serie contiene una muestra perdida en $t = 0.9$ s
+> (valor exactamente 0) que genera un máximo local artificial de ~0.034 m, muy por debajo de
+> los máximos reales (~0.07 m). Se exige una prominencia mínima al detectar los picos para
+> descartarlo; sin ese filtro, el pico espurio divide un período en dos y triplica la
+> incertidumbre reportada.
 
 ---
 

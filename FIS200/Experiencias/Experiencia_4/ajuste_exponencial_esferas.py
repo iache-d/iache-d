@@ -45,6 +45,6 @@ plt.grid(True)
 plt.ylim(0, 0.6)
 plt.legend(fontsize=14)
 
-plt.savefig("grafico_ajuste_exponencial.png", dpi=300, transparent=True)
+plt.savefig("grafico_ajuste_exponencial.png", dpi=300)
 
 plt.show()
